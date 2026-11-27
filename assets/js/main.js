@@ -1,167 +1,24 @@
-const copy = {
-en: {
-navAbout:"About",navWork:"Work",navExperience:"Experience",navWriting:"Writing",navContact:"Contact",navTeaching:"Teaching",coverCaption:"GAME DEVELOPMENT · SOFTWARE · CREATIVE TECHNOLOGY",remote:"Open to remote collaboration",statGlim:"CTR & CPI projects at Glim Games",statYears:"Years of game development experience",aboutSubtitle:"A little about my work and approach",aboutExtra:"I also enjoy teaching, mentoring, and helping small teams turn ideas into clear, achievable project plans.",servicesTitle:"Services",servicesSubtitle:"Ways I can contribute to a project or team",teachingTitle:"Teaching & mentoring",teachingSubtitle:"Courses, workshops and educational activities",educationTitle:"Education",educationDegree:"Computer Engineering",educationCertificate:"Harvard CS50",educationCertificateSub:"Programming Certificate",connectTitle:"Let’s connect",connectText:"For project inquiries, collaboration and professional conversations.",backToTop:"Back to top ↑",showAllProjects:"Show all projects",showFewerProjects:"Show fewer projects",
-availability:"OPEN TO SELECT PROJECTS & COLLABORATIONS",hello:"Hello, I'm",role:"Game Developer · Unity & C# Engineer · Technical Lead",intro:"I build gameplay systems and reliable software, turning ideas into polished, playable experiences.",viewWork:"Explore my work",getInTouch:"Get in touch",visualCaption:"ENGINEERING PLAYFUL EXPERIENCES",scroll:"SCROLL TO EXPLORE",
-aboutLabel:"PROFILE",aboutTitle:"Engineering games.<br><em>Solving real problems.</em>",aboutText:"I'm a game and software developer with professional experience dating back to 2015. My work spans Unity and C#, gameplay programming, online systems, technical problem-solving, and team collaboration.",statSince:"Developing games since",statProjects:"Casual & hyper-casual projects at Pendar (CV)",statRoles:"Development · Project · Technical",
-workLabel:"SELECTED WORK",workTitle:"Selected projects",workSub:"A selection of game development work and technical contributions.",projectMvp:"ANDROID · CASUAL PUZZLE · MVP",busTitle:"Passenger Sorting Puzzle",busDesc:"A completed Android game MVP inspired by the passenger and bus sorting puzzle genre. Full technical implementation, excluding art and visual design.",projectMvp2:"ANDROID · CASUAL PUZZLE · MVP",railTitle:"Railwood-inspired Puzzle",railDesc:"A second completed casual game MVP, based on route and train puzzle mechanics. Full technical implementation, excluding art and visual design.",projectWebgl:"MULTIPLAYER · WEBGL",onlineTitle:"Online Game Systems",onlineDesc:"Experience in multiplayer online system programming and browser-based game development.",projectTools:"UNITY · GAME SYSTEMS",modularTitle:"Modular Game Systems",modularDesc:"Development of reusable, modular systems and support for multiple casual and hyper-casual game projects.",portfolioNote:"Project visuals and detailed case studies will be added from the original media archive.",
-experienceLabel:"BACKGROUND",experienceTitle:"Experience & roles",lifeRole:"Senior Game Developer & Project Manager · Game development and project coordination.",faniRole:"Senior Game Developer & Project Manager Consultant.",pendarRole:"Game Developer and Senior Game Developer · Casual and hyper-casual projects.",teamsRole:"Development work with Loomana, Glim Games, Unbound and Revenant.",earlyRole:"Game Developer; Founder and Developer at BlueAge Team.",
-skillsLabel:"CAPABILITIES",skillsTitle:"Tools & expertise",writingLabel:"NOTES & IDEAS",writingTitle:"Writing & learning",writingSub:"Technical notes and articles on game development, software, and emerging technology.",writingComing:"Articles are being organized.",writingComingSub:"The blog will grow with practical notes, project breakdowns, and lessons learned.",contactLabel:"LET'S CONNECT",contactEyebrow:"HAVE A PROJECT IN MIND?",contactTitle:"Let's build<br><em>something meaningful.</em>",contactText:"Available for selected Unity development projects, technical collaboration, and teaching opportunities.",footer:"Designed & built with care."
-},
-fa: {
-navAbout:"درباره من",navWork:"نمونه‌کارها",navExperience:"سوابق",navWriting:"مقالات",navContact:"ارتباط",navTeaching:"آموزش",coverCaption:"توسعه بازی · نرم‌افزار · فناوری‌های خلاق",remote:"آماده همکاری دورکاری",statGlim:"پروژه‌های CTR و CPI در گلیم گیمز",statYears:"سال تجربه در بازی‌سازی",aboutSubtitle:"نگاهی کوتاه به مسیر و رویکرد کاری من",aboutExtra:"به آموزش و منتورینگ نیز علاقه‌مندم و به تیم‌های کوچک کمک می‌کنم ایده‌هایشان را به برنامه‌های اجرایی روشن و دست‌یافتنی تبدیل کنند.",servicesTitle:"خدمات",servicesSubtitle:"زمینه‌هایی که می‌توانم در آن‌ها به پروژه یا تیم کمک کنم",teachingTitle:"آموزش و منتورینگ",teachingSubtitle:"دوره‌ها، کارگاه‌ها و فعالیت‌های آموزشی",educationTitle:"تحصیلات",educationDegree:"مهندسی کامپیوتر",educationCertificate:"دوره CS50 دانشگاه هاروارد",educationCertificateSub:"گواهی آموزش برنامه‌نویسی",connectTitle:"راه‌های ارتباطی",connectText:"برای پیشنهاد همکاری، پروژه و گفت‌وگوهای حرفه‌ای.",backToTop:"بازگشت به بالا ↑",showAllProjects:"مشاهده همه پروژه‌ها",showFewerProjects:"نمایش موارد کمتر",
-availability:"آماده همکاری در پروژه‌های منتخب",hello:"سلام، من",role:"توسعه‌دهنده بازی · برنامه‌نویس Unity و C# · مدیر فنی",intro:"سیستم‌های گیم‌پلی و نرم‌افزارهای قابل اتکا می‌سازم و ایده‌ها را به تجربه‌هایی قابل بازی تبدیل می‌کنم.",viewWork:"مشاهده نمونه‌کارها",getInTouch:"ارتباط با من",visualCaption:"مهندسی تجربه‌های تعاملی",scroll:"برای مشاهده بیشتر اسکرول کنید",
-aboutLabel:"معرفی",aboutTitle:"توسعه بازی؛<br><em>حل مسئله‌های واقعی.</em>",aboutText:"من توسعه‌دهنده بازی و نرم‌افزار هستم و سابقه حرفه‌ای فعالیتم در این حوزه به سال ۲۰۱۵ بازمی‌گردد. حوزه کاری من شامل Unity و C#، برنامه‌نویسی گیم‌پلی، سیستم‌های آنلاین، حل مسائل فنی و همکاری و هدایت تیم‌هاست.",statSince:"شروع فعالیت در بازی‌سازی",statProjects:"پروژه کژوال و هایپرکژوال در پندار (طبق رزومه)",statRoles:"توسعه · مدیریت پروژه · مدیریت فنی",
-workLabel:"منتخب پروژه‌ها",workTitle:"نمونه‌کارها",workSub:"گزیده‌ای از پروژه‌های بازی‌سازی و فعالیت‌های فنی.",projectMvp:"اندروید · پازل کژوال · MVP",busTitle:"بازی مرتب‌سازی مسافران",busDesc:"یک MVP تکمیل‌شده برای اندروید، الهام‌گرفته از سبک مرتب‌سازی مسافران و اتوبوس‌ها. پیاده‌سازی تمام بخش‌های فنی به‌جز طراحی و تولید آرت.",projectMvp2:"اندروید · پازل کژوال · MVP",railTitle:"بازی الهام‌گرفته از Railwood",railDesc:"دومین MVP تکمیل‌شده در سبک کژوال با مکانیک‌های مرتبط با مسیر و قطار. پیاده‌سازی تمام بخش‌های فنی به‌جز طراحی و تولید آرت.",projectWebgl:"چندنفره · WEBGL",onlineTitle:"سیستم‌های بازی آنلاین",onlineDesc:"تجربه برنامه‌نویسی سیستم‌های آنلاین چندنفره و توسعه بازی‌های مبتنی بر مرورگر.",projectTools:"یونیتی · سیستم‌های بازی",modularTitle:"سیستم‌های ماژولار بازی",modularDesc:"توسعه سیستم‌های ماژولار و قابل استفاده مجدد و همکاری فنی در پروژه‌های متعدد کژوال و هایپرکژوال.",portfolioNote:"تصاویر پروژه‌ها و شرح‌مطالعات دقیق‌تر، از آرشیو رسانه‌ای اصلی اضافه خواهند شد.",
-experienceLabel:"پیشینه حرفه‌ای",experienceTitle:"سوابق و مسئولیت‌ها",lifeRole:"برنامه‌نویس ارشد بازی و مدیر پروژه · توسعه بازی و هماهنگی پروژه.",faniRole:"برنامه‌نویس ارشد بازی و مشاور مدیریت پروژه.",pendarRole:"برنامه‌نویس بازی و برنامه‌نویس ارشد · پروژه‌های کژوال و هایپرکژوال.",teamsRole:"همکاری در توسعه بازی با تیم‌های لومانا، گلیم گیمز، آنباند و روننت.",earlyRole:"برنامه‌نویس بازی؛ مؤسس و توسعه‌دهنده تیم BlueAge.",
-skillsLabel:"توانمندی‌ها",skillsTitle:"ابزارها و تخصص‌ها",writingLabel:"یادداشت‌ها و ایده‌ها",writingTitle:"مقالات و یادگیری",writingSub:"یادداشت‌ها و مقالات فنی درباره بازی‌سازی، نرم‌افزار و فناوری‌های نوظهور.",writingComing:"مقالات در حال دسته‌بندی هستند.",writingComingSub:"وبلاگ به‌مرور با یادداشت‌های کاربردی، بررسی پروژه‌ها و تجربه‌های فنی تکمیل خواهد شد.",contactLabel:"در ارتباط باشیم",contactEyebrow:"پروژه‌ای در ذهن دارید؟",contactTitle:"بیایید چیزی<br><em>ارزشمند بسازیم.</em>",contactText:"آماده همکاری در پروژه‌های منتخب Unity، فعالیت‌های فنی و فرصت‌های آموزشی هستم.",footer:"با دقت طراحی و ساخته شده است."
-}
-};
-const languageKey = "site-language";
-const themeKey = "site-theme";
-const themeButton = document.getElementById("themeToggle");
-function applyTheme(next) {
-  const theme = next === "dark" ? "dark" : "light";
-  document.documentElement.dataset.theme = theme;
-  if (themeButton) { themeButton.textContent = theme === "dark" ? "☀" : "☾"; themeButton.setAttribute("aria-label", theme === "dark" ? "Switch to light theme" : "Switch to dark theme"); themeButton.title = theme === "dark" ? "Light theme" : "Dark theme"; }
-  localStorage.setItem(themeKey, theme);
-}
-
-let language = localStorage.getItem(languageKey) === "fa" ? "fa" : "en";
-const languageButton = document.getElementById("langToggle");
-const contentRoot = ".";
-const currentLang = () => language;
-const localized = value => {
-  if (value && typeof value === "object") return value[language] ?? value.en ?? "";
-  return value ?? "";
-};
-const node = (tag, className = "", text) => {
-  const el = document.createElement(tag);
-  if (className) el.className = className;
-  if (text !== undefined && text !== null) el.textContent = String(text);
-  return el;
-};
-async function loadJson(path) {
-  const response = await fetch(path, { cache: "no-cache" });
-  if (!response.ok) throw new Error(`Failed to load ${path}: ${response.status}`);
-  return response.json();
-}
-function applyLanguage(next) {
-  language = next === "fa" ? "fa" : "en";
-  document.documentElement.lang = language;
-  document.documentElement.dir = language === "fa" ? "rtl" : "ltr";
-  document.body.dir = language === "fa" ? "rtl" : "ltr";
-  document.querySelectorAll("[data-i18n]").forEach(el => {
-    const value = copy[language][el.dataset.i18n];
-    if (value !== undefined) el.innerHTML = value;
-  });
-  if (languageButton) languageButton.textContent = language === "fa" ? "EN / فا" : "فا / EN";
-  localStorage.setItem(languageKey, language);
-  renderAllContent();
-}
-let showAllProjects = false;
-async function renderProjects() {
-  const target = document.getElementById("projectGrid");
-  if (!target) return;
-  target.replaceChildren();
-  try {
-    const manifest = await loadJson("./pcv/Projects/index.json");
-    const records = await Promise.all((manifest.items || []).map(slug => loadJson(`./pcv/Projects/${encodeURIComponent(slug)}/project.json`)));
-    const visible = showAllProjects ? records : records.slice(0, 4);
-    visible.forEach((project, index) => {
-      const card = node("article", "project-card");
-      const art = node("div", `project-art project-art-${index % 4}`);
-      const image = node("img", "project-media"); image.src = project.image || "./assets/images/project-placeholder.svg"; image.alt = localized(project.title); art.append(image);
-      const meta = node("div", "project-meta");
-      meta.append(node("span", "project-type", localized(project.category)),node("h3", "", localized(project.title)),node("p", "", localized(project.summary)));
-      if(project.organization || project.period) meta.append(node("p","project-org",[localized(project.organization),localized(project.period)].filter(Boolean).join(" · ")));
-      if(project.role) meta.append(node("p","project-role",localized(project.role)));
-      if(project.details || project.highlights) { const details=node("details","project-details"); details.append(node("summary","",language==="fa"?"جزئیات بیشتر":"More details")); if(project.details) details.append(node("p","",localized(project.details))); const hs=localized(project.highlights); if(Array.isArray(hs)){const ul=node("ul");hs.forEach(h=>ul.append(node("li","",h)));details.append(ul);}meta.append(details);}
-      const link=node("a","project-link",language==="fa"?"مشاهده پروژه ↗":"View project ↗");link.href=project.url||"https://example.com/";link.target="_blank";link.rel="noreferrer";meta.append(link);
-      card.append(art,meta);target.append(card);
-    });
-    const toggle=document.getElementById("projectToggle");if(toggle){toggle.hidden=records.length<=4;toggle.textContent=language==="fa"?(showAllProjects?copy.fa.showFewerProjects:copy.fa.showAllProjects):(showAllProjects?copy.en.showFewerProjects:copy.en.showAllProjects);}
-  } catch(error){console.error("Projects:",error);target.append(node("p","section-note",language==="fa"?"بارگذاری پروژه‌ها ناموفق بود.":"Projects could not be loaded."));}
-}
-
-async function renderArticles() {
- const target=document.getElementById("articleList");if(!target)return;target.replaceChildren();
- try {
-  const manifest=await loadJson("./pcv/Articles/index.json");
-  const records=await Promise.all((manifest.items||[]).map(slug=>loadJson(`./pcv/Articles/${encodeURIComponent(slug)}/article.json`)));
-  records.forEach(article=>{
-   const item=node("article","article-item"),img=node("img","article-media");img.src=article.image||"./assets/images/article-placeholder.svg";img.alt=localized(article.title);
-   const body=node("div","article-content");body.append(node("span","project-type",localized(article.category)),node("h3","",localized(article.title)),node("p","",localized(article.excerpt)));
-   if(article.date)body.append(node("span","article-date",localized(article.date)));
-   const link=node("a","text-link",language==="fa"?"مطالعه مقاله ↗":"Read article ↗");link.href=article.url||"https://example.com/";link.target="_blank";link.rel="noreferrer";body.append(link);item.append(img,body);target.append(item);
-  });
- }catch(error){console.error("Articles:",error);target.append(node("p","section-note",language==="fa"?"بارگذاری مقالات ناموفق بود.":"Articles could not be loaded."));}
-}
-
-async function renderCollection(folder,fileName,targetId,className){
- const target=document.getElementById(targetId);if(!target)return;target.replaceChildren();
- try{
-  const manifest=await loadJson(`./pcv/${folder}/index.json`);
-  const records=await Promise.all((manifest.items||[]).map(slug=>loadJson(`./pcv/${folder}/${encodeURIComponent(slug)}/${fileName}`)));
-  records.forEach(record=>{
-   const card=node("article",className),logo=node("img","company-logo");logo.src=record.logo||"./assets/images/company-placeholder.svg";logo.alt="";
-   const body=node("div","timeline-content");const category=localized(record.category||record.type);if(category)body.append(node("span","project-type",category));
-   body.append(node("h3","",localized(record.title||record.name)),node("p","",localized(record.summary||record.description)));
-   if(record.period)body.append(node("span","article-date",localized(record.period)));if(record.role)body.append(node("p","project-role",localized(record.role)));
-   const link=node("a","text-link",language==="fa"?"مشاهده مجموعه ↗":"View organization ↗");link.href=record.url||"https://example.com/";link.target="_blank";link.rel="noreferrer";body.append(link);
-   card.append(logo,body);target.append(card);
-  });
- }catch(error){console.error(folder+":",error);target.append(node("p","section-note",language==="fa"?"بارگذاری اطلاعات ناموفق بود.":"Content could not be loaded."));}
-}
-
-async function renderProfile() {
-  try {
-    const profile = await loadJson("./pcv/About/profile.json");
-    const visual = document.getElementById("profileVisual");
-    if (visual && profile.profileImage?.src && !visual.querySelector("img")) {
-      const img = node("img");
-      img.src = profile.profileImage.src.startsWith("./") ? profile.profileImage.src : `./pcv/${profile.profileImage.src}`;
-      img.alt = localized(profile.profileImage.alt);
-      img.onerror = () => img.remove();
-      visual.prepend(img);
-    }
-    const name = localized(profile.name);
-    if (name) document.title = name + " — Game Developer & Software Engineer";
-  } catch (error) {
-    console.info("Profile metadata is unavailable.", error);
-  }
-}
-async function renderSkills() {
-  const target = document.querySelector(".skills-list");
-  if (!target) return;
-  try {
-    const data = await loadJson("./pcv/Skills/index.json");
-    target.replaceChildren();
-    (data.items || []).forEach(item => target.append(node("span", "", localized(item.name || item))));
-  } catch (error) {
-    console.error("Skills:", error);
-  }
-}
-function setupMotion(){
- const items=document.querySelectorAll(".content-card,.side-card,.profile-card,.site-footer");
- if(!("IntersectionObserver" in window)||window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
- const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("reveal-visible");observer.unobserve(entry.target);}}),{threshold:.08});
- items.forEach(el=>{el.classList.add("reveal-pending");observer.observe(el);});
-}
-function renderAllContent() {
-  renderProjects();
-  renderArticles();
-  renderCollection("Services", "service.json", "serviceGrid", "service-card");
-  renderCollection("Teaching", "teaching.json", "teachingList", "article-item");
-  renderCollection("Experience", "experience.json", "experienceList", "timeline-item");
-  renderProfile();
-  renderSkills();
-  setupMotion();
-}
-if (languageButton) languageButton.addEventListener("click", () => applyLanguage(language === "en" ? "fa" : "en"));
-if (themeButton) themeButton.addEventListener("click", () => applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark"));
-const projectToggle = document.getElementById("projectToggle");
-if (projectToggle) projectToggle.addEventListener("click", () => { showAllProjects = !showAllProjects; renderProjects(); });
-applyTheme(localStorage.getItem(themeKey) || "light");
-const year = document.getElementById("year");
-if (year) year.textContent = new Date().getFullYear();
-applyLanguage(language);
+"use strict";
+const DATA_URL="./pcv/site-content.json";
+const langKey="site-language",themeKey="site-theme";
+let data,language=localStorage.getItem(langKey)==="fa"?"fa":"en",showAllProjects=false;
+const t=v=>v&&typeof v==="object"?(v[language]??v.en??""):v??"";
+const el=(tag,cls="",value)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(value!==undefined)n.textContent=String(value);return n};
+const link=(label,href,cls="",external=false)=>{const a=el("a",cls,label);a.href=href;if(external){a.target="_blank";a.rel="noreferrer"}return a};
+function section(id,heading,sub,content){const s=el("section","card content-card");s.id=id;const h=el("div","section-heading"),wrap=el("div");wrap.append(el("h2","",t(heading)),el("p","",t(sub)));h.append(wrap);s.append(h,content);return s}
+function buildHeader(){document.getElementById("brandName").textContent=data.brand;const nav=document.getElementById("mainNav");nav.replaceChildren();data.navigation.forEach(item=>nav.append(link(t(item.label),"#"+item.id)));const actions=document.getElementById("topbarActions");actions.replaceChildren();actions.append(link(language==="fa"?"ارتباط":"Contact","#contact","contact-top"));actions.append(link("09134458540","tel:+989134458540","contact-top phone-top"));actions.append(link("Telegram ↗","https://t.me/MRahmati","contact-top",true));const theme=el("button","theme-toggle",document.documentElement.dataset.theme==="dark"?"☀":"☾");theme.type="button";theme.onclick=()=>setTheme(document.documentElement.dataset.theme==="dark"?"light":"dark");actions.append(theme);const lang=el("button","lang-toggle",language==="fa"?"EN / فا":"فا / EN");lang.type="button";lang.onclick=()=>setLanguage(language==="fa"?"en":"fa");actions.append(lang)}
+function buildProfile(){const p=data.profile,root=document.getElementById("profileRoot");root.replaceChildren();const card=el("section","profile-card card"),main=el("div","profile-main"),avatar=el("div","profile-avatar"),img=el("img");img.src=p.image;img.alt=t(p.name);avatar.append(img);const head=el("div","profile-heading"),avail=el("div","availability");avail.append(el("span","status-dot"),el("span","",t(p.availability)));head.append(avail,el("h1","",t(p.name)),el("p","profile-role",t(p.headline)));const buttons=el("div","profile-actions");p.actions.forEach(a=>buttons.append(link(t(a.label),a.href,"button button-"+a.kind,a.external)));head.append(buttons);main.append(avatar,head);const facts=el("div","profile-facts");data.facts.forEach(f=>{const box=el("div");box.append(el("strong","",f.value),el("span","",t(f.label)));facts.append(box)});card.append(main,facts);root.append(card)}
+function buildAbout(){const c=el("div");c.append(el("p","lead",t(data.sections.about.body)),el("p","body-copy",t(data.sections.about.extra)));return section("about",data.sections.about.title,data.sections.about.subtitle,c)}
+function buildExperience(){const list=el("div","timeline");data.experienceItems.forEach(item=>{const row=el("article","timeline-item"),img=el("img","company-logo");img.src=item.logo;img.alt=item.company;const body=el("div","timeline-content");body.append(el("h3","",item.company),el("span","article-date",item.period),el("p","project-role",t(item.role)),el("p","",t(item.description)));row.append(img,body);list.append(row)});return section("experience",data.sections.experience.title,data.sections.experience.subtitle,list)}
+function buildProjects(){const list=el("div","project-grid");const records=showAllProjects?data.projectsItems:data.projectsItems.slice(0,4);records.forEach((p,i)=>{const card=el("article","project-card"),img=el("img","project-media");img.src=p.image;img.alt=t(p.title);const visual=el("div","project-art");visual.append(img);const body=el("div","project-meta");body.append(el("span","project-type",t(p.category)),el("h3","",t(p.title)),el("p","",t(p.summary)));const details=el("details","project-details"),summary=el("summary","",t(data.sections.projects.more));details.append(summary,el("p","",t(p.details)));const bar=el("div","project-card-actions");bar.append(details,link(t(data.sections.projects.view),p.url,"project-link",true));body.append(bar);card.append(visual,body);list.append(card)});const wrap=el("div");wrap.append(list);if(data.projectsItems.length>4){const btn=el("button","project-toggle",t(showAllProjects?data.sections.projects.showLess:data.sections.projects.showAll));btn.onclick=()=>{showAllProjects=!showAllProjects;renderMain()};wrap.append(btn)}return section("projects",data.sections.projects.title,data.sections.projects.subtitle,wrap)}
+function buildServices(){const grid=el("div","service-grid");data.servicesItems.forEach(item=>{const card=el("article","service-card");card.append(el("h3","",t(item.title)),el("p","",t(item.description)));grid.append(card)});return section("services",data.sections.services.title,data.sections.services.subtitle,grid)}
+function buildTeaching(){const list=el("div","article-list");data.teachingItems.forEach(item=>{const card=el("article","article-item"),img=el("img","article-media");img.src=item.image;img.alt=t(item.title);const body=el("div","article-content");body.append(el("h3","",t(item.title)),el("p","",t(item.description)));card.append(img,body);list.append(card)});return section("teaching",data.sections.teaching.title,data.sections.teaching.subtitle,list)}
+function buildArticles(){const list=el("div","article-list");data.articlesItems.forEach(item=>{const card=el("article","article-item"),img=el("img","article-media");img.src=item.image;img.alt=t(item.title);const body=el("div","article-content");body.append(el("span","project-type",t(item.category)),el("h3","",t(item.title)),el("p","",t(item.description)),el("span","article-date",t(item.date)),link(t(data.sections.articles.view),item.url,"text-link",true));card.append(img,body);list.append(card)});return section("articles",data.sections.articles.title,data.sections.articles.subtitle,list)}
+function sideCard(id,title,content){const s=el("section","card side-card");if(id)s.id=id;const h=el("div","side-heading");h.append(el("h2","",t(title)));s.append(h,content);return s}
+function buildSide(){const side=document.getElementById("sideContent");side.replaceChildren();const skills=el("div","skills-list");data.skills.forEach(x=>skills.append(el("span","",x)));side.append(sideCard("skills",data.sections.skills.title,skills));const edu=el("div");data.sections.education.items.forEach(x=>{const e=el("div","simple-entry");e.append(el("strong","",t(x.title)),el("span","",t(x.subtitle)));edu.append(e)});side.append(sideCard("",data.sections.education.title,edu));const contact=el("div");contact.append(el("p","side-copy",t(data.sections.contact.description)));data.sections.contact.items.forEach(x=>contact.append(link(x.label,x.href,"side-link",x.external)));side.append(sideCard("contact",data.sections.contact.title,contact))}
+function buildFooter(){const f=document.getElementById("siteFooter");f.replaceChildren(el("span","",data.footer.copyright+" "+new Date().getFullYear()+" "+data.footer.name),el("span","",t(data.footer.note)),link(t(data.footer.top),"#home"))}
+function renderMain(){const main=document.getElementById("mainContent");main.replaceChildren(buildAbout(),buildExperience(),buildProjects(),buildServices(),buildTeaching(),buildArticles());setupMotion()}
+function setLanguage(next){language=next;localStorage.setItem(langKey,language);document.documentElement.lang=language;document.documentElement.dir=language==="fa"?"rtl":"ltr";document.body.dir=document.documentElement.dir;document.title=t(data.meta.title);document.querySelector('meta[name="description"]').content=t(data.meta.description);buildHeader();buildProfile();renderMain();buildSide();buildFooter()}
+function setTheme(next){const root=document.documentElement;root.classList.add("theme-transition");root.dataset.theme=next;localStorage.setItem(themeKey,next);const b=document.querySelector(".theme-toggle");if(b)b.textContent=next==="dark"?"☀":"☾";setTimeout(()=>root.classList.remove("theme-transition"),450)}
+function setupMotion(){const targets=document.querySelectorAll(".content-card,.side-card,.profile-card,.site-footer");if(!("IntersectionObserver"in window)||matchMedia("(prefers-reduced-motion: reduce)").matches)return;const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("reveal-visible");observer.unobserve(e.target)}}),{threshold:.08});targets.forEach(e=>{e.classList.add("reveal-pending");observer.observe(e)})}
+(async()=>{try{const r=await fetch(DATA_URL,{cache:"no-cache"});if(!r.ok)throw Error("Content file failed: "+r.status);data=await r.json();document.documentElement.dataset.theme=localStorage.getItem(themeKey)||"light";setLanguage(language)}catch(e){console.error(e);document.body.textContent="The portfolio content could not be loaded."}})();
