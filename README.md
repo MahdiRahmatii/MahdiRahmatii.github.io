@@ -1,21 +1,18 @@
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=2800&pause=600&color=38BDF8&center=true&vCenter=true&width=620&lines=Mahdi+Rahmati;Game+%26+Software+Development;2D+Graphic+Design;Teaching+%26+Mentorship" alt="Mahdi Rahmati — Development, Design and Education" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=2800&pause=600&color=38BDF8&center=true&vCenter=true&width=620&lines=Mahdi+Rahmati;Game+%26+Software+Development;2D+Graphic+Design;Teaching+%26+Teamwork" alt="Mahdi Rahmati — Development, Design and Education" />
   <p>
     <strong>Game Development</strong> &nbsp;•&nbsp;
     <strong>Software Development</strong> &nbsp;•&nbsp;
     <strong>2D Graphic Design</strong> &nbsp;•&nbsp;
-    <strong>Education</strong>
+    <strong>Team Management</strong>
   </p>
-  <p><em>Turning ideas into interactive experiences, useful software, and thoughtful visual work.</em></p>
+  <p><em>I bring technology, visual creativity, and teamwork together to turn ideas into practical digital experiences.</em></p>
   <a href="https://mahdirahmatii.github.io">
     <img src="https://img.shields.io/badge/Explore-My%20Portfolio-0EA5E9?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Explore my portfolio" />
   </a>
 </div>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/mahdirahmati">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-  </a>
   <a href="https://t.me/MRahmati">
     <img src="https://img.shields.io/badge/Telegram-Message-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" />
   </a>
@@ -28,11 +25,13 @@
 
 ## 👋 About Me
 
-I'm **Mahdi Rahmati**, a developer, designer, and instructor with **8+ years of experience in game development**.
+I'm **Mahdi Rahmati** — a developer, designer, and instructor with **8+ years of experience in game development**.
 
-My professional background is mainly in **C# and Unity**, where I've contributed to casual and hyper-casual games, worked with development teams, and taken on project and team management responsibilities. Alongside programming, I have experience in **2D graphic design and visual content creation**. I also enjoy teaching and mentoring, and helping others turn technical concepts into practical skills.
+My background brings together **game and software development**, **2D graphic design**, and **technical project coordination**. I have worked with Unity and C#, contributed to casual and hyper-casual game projects, created visual content, and collaborated with development teams.
 
-I value clear thinking, maintainable solutions, collaboration, and continuous learning.
+I also have experience in **managing and coordinating small teams**: organizing tasks, facilitating communication, providing technical guidance, and helping people stay aligned around shared project goals. Through teaching and mentoring, I enjoy making technical knowledge more accessible and helping others develop practical skills.
+
+I’m interested in taking ideas from an early concept to a clear, workable result — whether that means building a feature, improving a workflow, creating a visual asset, or helping a team work more effectively.
 
 ## ✨ What I Do
 
@@ -40,83 +39,64 @@ I value clear thinking, maintainable solutions, collaboration, and continuous le
   <tr>
     <td width="50%" valign="top">
       <h3>🎮 Game Development</h3>
-      Unity, C#, gameplay systems, and practical game development.
+      Developing games and interactive experiences with Unity and C#, with attention to gameplay systems, code quality, and performance.
     </td>
     <td width="50%" valign="top">
       <h3>💻 Software Development</h3>
-      Object-oriented programming, SOLID principles, design patterns, and maintainable code.
+      Building practical software solutions using object-oriented programming, structured code, and maintainable design.
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <h3>🎨 2D Graphic Design</h3>
-      Visual design, Photoshop, and graphic content for digital projects.
+      Creating visual assets and graphic content for digital products, presentations, and promotional materials.
     </td>
     <td width="50%" valign="top">
+      <h3>👥 Small-Team Management</h3>
+      Managing and coordinating small teams through task planning, communication, prioritization, and day-to-day project support.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
       <h3>📚 Teaching & Mentorship</h3>
-      Introducing learners to programming and game development through practical guidance.
+      Teaching programming and game development, explaining technical concepts, and guiding learners through practical work.
+    </td>
+    <td width="50%" valign="top">
+      <h3>🧩 Problem-Solving</h3>
+      Breaking down complex challenges, evaluating practical options, and finding solutions that fit project needs.
     </td>
   </tr>
 </table>
-
-## 🧰 Tools & Technologies
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Unity-100000?style=for-the-badge&logo=unity&logoColor=white" alt="Unity" />
-  <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white" alt="C sharp" />
-  <img src="https://img.shields.io/badge/Photoshop-31A8FF?style=for-the-badge&logo=adobephotoshop&logoColor=white" alt="Adobe Photoshop" />
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-  <img src="https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual%20studio&logoColor=white" alt="Visual Studio" />
-  <img src="https://img.shields.io/badge/Rider-000000?style=for-the-badge&logo=rider&logoColor=white" alt="JetBrains Rider" />
-</p>
 
 ## 💼 Experience Highlights
 
 - **8+ years** of professional experience in game development.
 - Contributed to **10+ casual and hyper-casual game projects** at Pendar.io.
 - Worked on **30+ CTR and CPI projects** at Glim Games.
-- Experience in game development instruction, mentoring, and technical team/project coordination.
+- Experience in teaching, mentoring, small-team management, and technical project coordination.
 
-*Explore my portfolio for selected work, projects, and more about my background.*
-
-## 📊 GitHub Snapshot
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=MahdiRahmatii&show_icons=true&theme=tokyonight&hide_border=true" height="170" alt="GitHub statistics" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=MahdiRahmatii&theme=tokyonight&hide_border=true" height="170" alt="GitHub contribution streak" />
-</div>
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MahdiRahmatii&layout=compact&theme=tokyonight&hide_border=true" height="150" alt="Most used languages" />
-</div>
+*These highlights are a snapshot of my background. Visit my portfolio to explore selected projects, experience, and more.*
 
 ---
 
 ## 🤝 Let's Connect
 
-I'm open to professional conversations, collaboration, and interesting projects.
+I'm open to professional conversations, knowledge sharing, collaboration, and interesting projects.
 
 <p align="center">
   <a href="https://mahdirahmatii.github.io">
-    <img src="https://img.shields.io/badge/Portfolio-Visit%20Website-0EA5E9?style=flat-square&logo=googlechrome&logoColor=white" alt="Portfolio" />
+    <img src="https://img.shields.io/badge/Portfolio-Visit%20Website-0EA5E9?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio" />
   </a>
-  &nbsp;
-  <a href="https://www.linkedin.com/in/mahdirahmati">
-    <img src="https://img.shields.io/badge/LinkedIn-Mahdi%20Rahmati-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" />
-  </a>
-  &nbsp;
   <a href="https://t.me/MRahmati">
-    <img src="https://img.shields.io/badge/Telegram-@MRahmati-26A5E4?style=flat-square&logo=telegram&logoColor=white" alt="Telegram" />
+    <img src="https://img.shields.io/badge/Telegram-@MRahmati-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" />
   </a>
-  &nbsp;
   <a href="mailto:mahdirahmati.it@gmail.com">
-    <img src="https://img.shields.io/badge/Email-Get%20in%20Touch-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email" />
+    <img src="https://img.shields.io/badge/Email-Get%20in%20Touch-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
 </p>
 
 <div align="center">
-  <sub>Thanks for visiting my profile!</sub>
+  <sub>Thanks for visiting. Feel free to explore my work and get in touch.</sub>
   <br />
   <img src="https://komarev.com/ghpvc/?username=MahdiRahmatii&label=Profile%20Views&color=0e75b6&style=flat" alt="Profile views" />
 </div>
