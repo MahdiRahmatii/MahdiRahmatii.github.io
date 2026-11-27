@@ -1,0 +1,20 @@
+{
+  "title": {
+    "en": "A Practical Approach to Building Game Systems",
+    "fa": "رویکردی عملی برای ساخت سیستم‌های بازی"
+  },
+  "category": {
+    "en": "Game Development · Technical Notes",
+    "fa": "بازی‌سازی · یادداشت فنی"
+  },
+  "excerpt": {
+    "en": "A sample article entry demonstrating the portfolio’s article layout, thumbnail, bilingual content and external reading link. Replace this placeholder with a real publication later.",
+    "fa": "این یک مقاله آزمایشی برای نمایش قالب مقالات، تصویر شاخص، محتوای دوزبانه و لینک مطالعه است. بعداً می‌توانی متن و نشانی واقعی مقاله را جایگزین کنی."
+  },
+  "date": {
+    "en": "Sample article · 2026",
+    "fa": "مقاله آزمایشی · ۱۴۰۵"
+  },
+  "url": "https://example.com/sample-game-development-article",
+  "image": "./assets/images/article-placeholder.svg"
+}
