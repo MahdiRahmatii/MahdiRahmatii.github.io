@@ -33,3 +33,120 @@ function setLanguage(next) {
 button.addEventListener("click", () => setLanguage(language === "en" ? "fa" : "en"));
 document.getElementById("year").textContent = new Date().getFullYear();
 setLanguage(language);
+
+
+/* Folder-driven portfolio content
+   Add a folder + JSON file and register its slug in the matching index.json.
+   No page markup changes are needed for new entries. */
+const contentRoot = ".";
+const currentLang = () => document.documentElement.lang === "fa" ? "fa" : "en";
+const localized = (value) => {
+  if (value && typeof value === "object") return value[currentLang()] || value.en || "";
+  return value || "";
+};
+async function loadJson(path) {
+  const response = await fetch(path, {cache:"no-store"});
+  if (!response.ok) throw new Error(`Could not load ${path} (${response.status})`);
+  return response.json();
+}
+function makeNode(tag, className, text) {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  if (text !== undefined) node.textContent = text;
+  return node;
+}
+async function renderProjects() {
+  const grid = document.getElementById("projectGrid");
+  if (!grid) return;
+  grid.replaceChildren();
+  try {
+    const manifest = await loadJson(`${contentRoot}/Projects/index.json`);
+    const records = await Promise.all((manifest.items || []).map(slug =>
+      loadJson(`${contentRoot}/Projects/${encodeURIComponent(slug)}/project.json`)
+    ));
+    records.forEach((project, index) => {
+      const card = makeNode("article", "project-card");
+      const art = makeNode("div", `project-art project-art-data project-art-${index % 4}`);
+      const artLabel = makeNode("span", "project-art-label", String(index + 1).padStart(2,"0"));
+      art.append(artLabel);
+      const meta = makeNode("div", "project-meta");
+      const info = makeNode("div");
+      info.append(makeNode("span","project-type",localized(project.category)));
+      info.append(makeNode("h3","",localized(project.title)));
+      info.append(makeNode("p","",localized(project.summary)));
+      const org = makeNode("p","project-org", [project.organization, project.period].filter(Boolean).join(" · "));
+      info.append(org);
+      const role = makeNode("p","project-role",localized(project.role));
+      info.append(role);
+      const arrow = makeNode("span","project-arrow","↗");
+      meta.append(info,arrow);
+      card.append(art,meta);
+      if (project.details || (project.highlights && project.highlights.length)) {
+        const extra = makeNode("details","project-details");
+        extra.append(makeNode("summary","",currentLang()==="fa"?"جزئیات بیشتر":"More details"));
+        if (project.details) extra.append(makeNode("p","",localized(project.details)));
+        const bullets = localized(project.highlights);
+        if (Array.isArray(bullets) && bullets.length) {
+          const ul = makeNode("ul","");
+          bullets.forEach(item => ul.append(makeNode("li","",item)));
+          extra.append(ul);
+        }
+        if (project.evidence) extra.append(makeNode("p","project-evidence",localized(project.evidence)));
+        meta.append(extra);
+      }
+      grid.append(card);
+    });
+    if (!records.length) grid.append(makeNode("p","section-note",currentLang()==="fa"?"هنوز پروژه‌ای ثبت نشده است.":"No projects have been added yet."));
+  } catch (error) {
+    grid.append(makeNode("p","section-note",currentLang()==="fa"?"بارگذاری پروژه‌ها با خطا مواجه شد.":"Projects could not be loaded."));
+    console.error(error);
+  }
+}
+async function renderArticles() {
+  const list = document.getElementById("articleList");
+  if (!list) return;
+  list.replaceChildren();
+  try {
+    const manifest = await loadJson(`${contentRoot}/Articles/index.json`);
+    const records = await Promise.all((manifest.items || []).map(slug =>
+      loadJson(`${contentRoot}/Articles/${encodeURIComponent(slug)}/article.json`)
+    ));
+    records.forEach(article => {
+      const item = makeNode("article","article-item");
+      const body = makeNode("div","");
+      body.append(makeNode("span","project-type",localized(article.category)));
+      body.append(makeNode("h3","",localized(article.title)));
+      body.append(makeNode("p","",localized(article.excerpt)));
+      if (article.date) body.append(makeNode("span","article-date",article.date));
+      if (article.url) {
+        const link = makeNode("a","text-link",currentLang()==="fa"?"مطالعه مقاله ↗":"Read article ↗");
+        link.href = article.url;
+        link.target = "_blank";
+        link.rel = "noreferrer";
+        body.append(link);
+      }
+      item.append(body);
+      list.append(item);
+    });
+    if (!records.length) {
+      const empty = makeNode("div","writing-placeholder");
+      empty.append(makeNode("span","writing-icon","✳"));
+      const body = makeNode("div","");
+      body.append(makeNode("strong","",currentLang()==="fa"?"هنوز مقاله‌ای ثبت نشده است.":"No articles have been added yet."));
+      body.append(makeNode("p","",currentLang()==="fa"?"رزومه‌های فعلی مقاله منتشرشده‌ای معرفی نمی‌کنند. پس از افزودن مقاله، کافی است پوشه آن را در Articles ثبت کنید.":"The current CVs do not list published articles. Add an article folder and register it in Articles/index.json when ready."));
+      empty.append(body);
+      list.append(empty);
+    }
+  } catch (error) {
+    list.append(makeNode("p","section-note",currentLang()==="fa"?"بارگذاری مقالات با خطا مواجه شد.":"Articles could not be loaded."));
+    console.error(error);
+  }
+}
+const originalSetLanguage = setLanguage;
+setLanguage = function(next) {
+  originalSetLanguage(next);
+  renderProjects();
+  renderArticles();
+};
+renderProjects();
+renderArticles();
