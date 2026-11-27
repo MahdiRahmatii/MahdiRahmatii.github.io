@@ -36,5 +36,7 @@
     "en": "Source: English CV, Experience section, Glim Games.",
     "fa": "منبع: رزومه انگلیسی، بخش سوابق شغلی، Glim Games."
   },
-  "media": []
+  "media": [],
+  "url": "https://example.com/glim-ctr-cpi",
+  "image": "./assets/images/project-placeholder.svg"
 }
