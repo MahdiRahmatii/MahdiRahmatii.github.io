@@ -1,25 +1,35 @@
-# Mahdi Rahmati — Portfolio content system
+# Mahdi Rahmati — Portfolio
 
-This is a static GitHub Pages portfolio. Content is stored as data in individual folders.
+A bilingual (English/Persian), folder-driven static portfolio hosted on GitHub Pages.
 
-## Add a project
-1. Create `Projects/<project-slug>/project.json`.
-2. Add the folder slug to `Projects/index.json` → `items`.
-3. The Projects section loads and renders it automatically; no HTML/CSS/JS edit is required.
+## Content architecture
 
-## Add an article
-1. Create `Articles/<article-slug>/article.json`.
-2. Add the folder slug to `Articles/index.json` → `items`.
-3. The Writing section loads and renders it automatically.
+- `Projects/<slug>/project.json` — project cards and case-study metadata.
+- `Articles/<category>/<slug>/article.json` — article metadata; article body can live in `content.md`.
+- `Services/<slug>/service.json` — services offered.
+- `Experience/<slug>/experience.json` — professional roles.
+- `Teaching/<slug>/teaching.json` — courses and teaching activities.
+- `About/profile.json` — profile identity and the single profile image path.
+- `About/education.json`, `About/certifications.json` — education and credentials.
+- `Skills/index.json` — skills list.
+- `Contact/contact.json` — public contact channels.
+- `config/site.json`, `config/navigation.json` — site-wide settings and navigation.
 
-## Content format
-Use bilingual `en` and `fa` objects for user-facing text. Project JSON fields currently used:
-`slug`, `title`, `organization`, `period`, `category`, `role`, `summary`, `details`, `highlights`, `evidence`, `media`.
+## Add content
 
-Article JSON fields currently used:
-`slug`, `title`, `date`, `category`, `excerpt`, `content`, `url`.
+Create the folder and its JSON file, then add its slug to that section's `index.json` manifest. The existing site layout and JavaScript do not need to be edited for ordinary content additions.
 
-Keep media inside the same content folder (for example `Projects/<slug>/media/`) and reference it with a relative path from the repository root.
+User-facing text should use bilingual objects:
+```json
+{ "en": "English text", "fa": "متن فارسی" }
+```
 
-## Evidence policy
-Initial project entries are limited to claims supported by the CV. The CV does not list published articles or individual project titles/details, so no article entries or unsupported project specifics have been invented.
+Keep project/article media beside the content that uses it. The public site can expose all files committed to this public repository; do not store secrets or private client assets here.
+
+## Profile image
+
+Place one image at `About/media/profile.webp`. The site reads its path from `About/profile.json`. Until a real image is added, the initials placeholder is displayed.
+
+## Evidence
+
+Initial experience and project claims should remain limited to the information supported by the supplied CVs or verified project evidence. Do not publish invented project names, metrics, or article publication claims.
