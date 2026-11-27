@@ -49,13 +49,8 @@
 
     <section class="section-wrap work-section" id="work">
       <div class="section-heading"><div class="section-label"><span>02</span><span data-i18n="workLabel">SELECTED WORK</span></div><h2 data-i18n="workTitle">Selected projects<span class="accent">.</span></h2><p data-i18n="workSub">A selection of game development work and technical contributions.</p></div>
-      <div class="project-grid">
-        <article class="project-card project-featured"><div class="project-art art-bus"><div class="mini-board"><i></i><i></i><i></i><b>BUS<br>JAM</b></div><span class="art-index">01</span></div><div class="project-meta"><div><span class="project-type" data-i18n="projectMvp">ANDROID · CASUAL PUZZLE · MVP</span><h3 data-i18n="busTitle">Passenger Sorting Puzzle</h3><p data-i18n="busDesc">A completed Android game MVP inspired by the passenger and bus sorting puzzle genre. Full technical implementation, excluding art and visual design.</p></div><span class="project-arrow">↗</span></div></article>
-        <article class="project-card"><div class="project-art art-rail"><div class="rail-track"><i></i><i></i><i></i><b>RAIL</b></div><span class="art-index">02</span></div><div class="project-meta"><div><span class="project-type" data-i18n="projectMvp2">ANDROID · CASUAL PUZZLE · MVP</span><h3 data-i18n="railTitle">Railwood-inspired Puzzle</h3><p data-i18n="railDesc">A second completed casual game MVP, based on route and train puzzle mechanics. Full technical implementation, excluding art and visual design.</p></div><span class="project-arrow">↗</span></div></article>
-        <article class="project-card"><div class="project-art art-online"><div class="network"><i></i><i></i><i></i><i></i><b>ONLINE<br>SYSTEMS</b></div><span class="art-index">03</span></div><div class="project-meta"><div><span class="project-type" data-i18n="projectWebgl">MULTIPLAYER · WEBGL</span><h3 data-i18n="onlineTitle">Online Game Systems</h3><p data-i18n="onlineDesc">Experience in multiplayer online system programming and browser-based game development.</p></div><span class="project-arrow">↗</span></div></article>
-        <article class="project-card"><div class="project-art art-modular"><div class="blocks"><i></i><i></i><i></i><i></i><b>MODULAR</b></div><span class="art-index">04</span></div><div class="project-meta"><div><span class="project-type" data-i18n="projectTools">UNITY · GAME SYSTEMS</span><h3 data-i18n="modularTitle">Modular Game Systems</h3><p data-i18n="modularDesc">Development of reusable, modular systems and support for multiple casual and hyper-casual game projects.</p></div><span class="project-arrow">↗</span></div></article>
-      </div>
-      <p class="section-note" data-i18n="portfolioNote">Project visuals and detailed case studies will be added from the original media archive.</p>
+      <div class="project-grid" id="projectGrid" aria-live="polite"></div>
+      <p class="section-note" data-i18n="portfolioNote">Project entries are loaded from individual folders inside Projects/.</p>
     </section>
 
     <section class="section-wrap experience-section" id="experience">
@@ -78,7 +73,7 @@
 
     <section class="section-wrap writing-section" id="writing">
       <div class="section-heading"><div class="section-label"><span>05</span><span data-i18n="writingLabel">NOTES & IDEAS</span></div><h2 data-i18n="writingTitle">Writing & learning<span class="accent">.</span></h2><p data-i18n="writingSub">Technical notes and articles on game development, software, and emerging technology.</p></div>
-      <div class="writing-placeholder"><span class="writing-icon">✳</span><div><strong data-i18n="writingComing">Articles are being organized.</strong><p data-i18n="writingComingSub">The blog will grow with practical notes, project breakdowns, and lessons learned.</p></div><span class="mono">BLOG / 001</span></div>
+      <div id="articleList" class="article-list" aria-live="polite"></div>
     </section>
 
     <section class="section-wrap contact-section" id="contact">
