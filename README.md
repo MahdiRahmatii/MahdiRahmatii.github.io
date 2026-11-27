@@ -1,22 +1,22 @@
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=500&color=00B4D8&center=true&vCenter=true&width=500&lines=Mahdi+Rahmati;Game+Developer;Unity+%26+C%23;Educator" alt="Mahdi Rahmati — Game Developer" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=500&color=00B4D8&center=true&vCenter=true&width=500&lines=Mahdi+Rahmati;Development;2D+Graphics;Education" alt="Mahdi Rahmati — Development, 2D Graphics, Education" />
 </div>
 
 <div align="center">
   <h3>
-    🎮 Game Developer · 🧩 Unity & C# · 📚 Educator
+    💻 Development · 🎨 2D Graphics · 📚 Education
   </h3>
   <p>
-    <em>Building maintainable games and reliable systems through thoughtful engineering and teamwork.</em>
+    <em>Creating digital experiences through development, visual design, and knowledge sharing.</em>
   </p>
   <p>
-    <a href="https://mahdirahmatii.github.io"><strong>🌐 Explore My Portfolio</strong></a>
+    <a href="https://mahdirahmatii.github.io"><strong>🌐 Visit My Portfolio</strong></a>
   </p>
 </div>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/mahdirahmati">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  <a href="https://mahdirahmatii.github.io">
+    <img src="https://img.shields.io/badge/Portfolio-Visit%20Website-0A8FBA?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio website" />
   </a>
   <a href="https://t.me/MRahmati">
     <img src="https://img.shields.io/badge/Telegram-Message-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" />
@@ -30,37 +30,37 @@
 
 ## 👤 About Me
 
-I’m a **Game Developer with 8+ years of experience**, focused on building **Unity games** with attention to software architecture, code quality, and performance.
+I’m a **developer and creative professional with 8+ years of experience** across game development, software development, and 2D graphic design.
 
-My experience includes working on casual and hyper-casual games, collaborating with development teams, and taking on technical project management responsibilities. I also teach and mentor aspiring developers, helping them build a solid foundation in C# and Unity.
+My work has included developing games with Unity and C#, creating visual content, collaborating with teams, and taking part in technical project management. I’m also involved in teaching and mentoring, sharing practical knowledge with people interested in technology and development.
 
-**I care about:**
-- ✅ Clean, maintainable, and scalable game architecture
-- ✅ Performance optimization, especially for mobile platforms
-- ✅ Practical problem-solving and effective teamwork
-- ✅ Sharing knowledge through teaching and mentorship
+**Areas I enjoy working in:**
+- ✅ Game and software development
+- ✅ Unity, C#, and software architecture
+- ✅ 2D graphic design and visual content
+- ✅ Problem-solving, teamwork, and technical education
 
 ---
 
-## ⚙️ Core Expertise
+## ⚙️ Areas of Expertise
 
 <table align="center">
   <tr>
     <td align="center" width="120">
-      🧱<br />
-      <b>Game Architecture</b>
-    </td>
-    <td align="center" width="120">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" width="40" height="40" alt="Unity" /><br />
-      <b>Unity Development</b>
+      <b>Game Development</b>
     </td>
     <td align="center" width="120">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" width="40" height="40" alt="C sharp" /><br />
-      <b>C#</b>
+      <b>Software Development</b>
     </td>
     <td align="center" width="120">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="40" height="40" alt="Git" /><br />
-      <b>Version Control</b>
+      🎨<br />
+      <b>2D Graphics</b>
+    </td>
+    <td align="center" width="120">
+      🧱<br />
+      <b>Software Architecture</b>
     </td>
   </tr>
   <tr>
@@ -85,11 +85,12 @@ My experience includes working on casual and hyper-casual games, collaborating w
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Tools & Technologies
 
 <p align="center">
   <img src="https://img.shields.io/badge/Unity-100000?style=for-the-badge&logo=unity&logoColor=white" alt="Unity" />
   <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white" alt="C sharp" />
+  <img src="https://img.shields.io/badge/Photoshop-31A8FF?style=for-the-badge&logo=adobephotoshop&logoColor=white" alt="Adobe Photoshop" />
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
   <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   <img src="https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual%20studio&logoColor=white" alt="Visual Studio" />
@@ -98,12 +99,12 @@ My experience includes working on casual and hyper-casual games, collaborating w
 
 ---
 
-## 🚀 Professional Focus
+## 🚀 Current Interests
 
-- 🧱 Designing maintainable and scalable systems in Unity
-- 🎮 Developing engaging gameplay experiences
-- 🔧 Improving code quality and performance in game projects
-- 📘 Teaching structured game development and mentoring learners
+- 🧱 Building games and useful software
+- 🎨 Creating 2D graphics and visual content
+- 🔧 Exploring software architecture and development practices
+- 📘 Teaching, learning, and sharing technical knowledge
 
 ---
 
@@ -122,20 +123,20 @@ My experience includes working on casual and hyper-casual games, collaborating w
 
 ## 🧭 Philosophy
 
-> *“A good game is not built by features — it is built by systems that survive change.”*
+> *“Good work comes from thoughtful ideas, clear systems, and continuous learning.”*
 
-I believe great engineering is:
-- 🟢 **Simple**, not complex
-- 🟡 **Scalable**, not fragile
-- 🔵 **Intentional**, not accidental
+I believe in:
+- 🟢 **Simplicity** over unnecessary complexity
+- 🟡 **Quality** over quick fixes
+- 🔵 **Learning** through building and sharing
 
 ---
 
 ## 🌐 Connect with Me
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/mahdirahmati">
-    <img src="https://img.shields.io/badge/LinkedIn-Mahdi%20Rahmati-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  <a href="https://mahdirahmatii.github.io">
+    <img src="https://img.shields.io/badge/Portfolio-Mahdi%20Rahmati-0A8FBA?style=flat-square&logo=googlechrome&logoColor=white" alt="Portfolio website" />
   </a>
   &nbsp;&nbsp;
   <a href="https://t.me/MRahmati">
@@ -151,7 +152,7 @@ I believe great engineering is:
 
 <div align="center">
   <i>
-    “Let’s build systems that last, not just games that run.”
+    “Let’s create, build, and keep learning.”
   </i>
   <br /><br />
   <img src="https://komarev.com/ghpvc/?username=MahdiRahmatii&label=Profile%20Views&color=0e75b6&style=flat" alt="Profile views" />
