@@ -65,120 +65,54 @@ async function renderProjects() {
   target.replaceChildren();
   try {
     const manifest = await loadJson("./pcv/Projects/index.json");
-    const records = await Promise.all((manifest.items || []).map(slug =>
-      loadJson(`./pcv/Projects/${encodeURIComponent(slug)}/project.json`)
-    ));
-    const visibleRecords = showAllProjects ? records : records.slice(0, 4);
-    records.forEach((project, index) => {
+    const records = await Promise.all((manifest.items || []).map(slug => loadJson(`./pcv/Projects/${encodeURIComponent(slug)}/project.json`)));
+    const visible = showAllProjects ? records : records.slice(0, 4);
+    visible.forEach((project, index) => {
       const card = node("article", "project-card");
-      const art = node("div", `project-art project-art-data project-art-${index % 4}`);
-      art.append(node("span", "project-art-label", String(index + 1).padStart(2, "0")));
+      const art = node("div", `project-art project-art-${index % 4}`);
+      const image = node("img", "project-media"); image.src = project.image || "./assets/images/project-placeholder.svg"; image.alt = localized(project.title); art.append(image);
       const meta = node("div", "project-meta");
-      const info = node("div");
-      info.append(
-        node("span", "project-type", localized(project.category)),
-        node("h3", "", localized(project.title)),
-        node("p", "", localized(project.summary))
-      );
-      const orgPeriod = [localized(project.organization), localized(project.period)].filter(Boolean).join(" · ");
-      if (orgPeriod) info.append(node("p", "project-org", orgPeriod));
-      if (project.role) info.append(node("p", "project-role", localized(project.role)));
-      meta.append(info, node("span", "project-arrow", "↗"));
-      card.append(art, meta);
-      if (project.details || project.highlights) {
-        const details = node("details", "project-details");
-        details.append(node("summary", "", language === "fa" ? "جزئیات بیشتر" : "More details"));
-        if (project.details) details.append(node("p", "", localized(project.details)));
-        const highlights = localized(project.highlights);
-        if (Array.isArray(highlights) && highlights.length) {
-          const list = node("ul");
-          highlights.forEach(item => list.append(node("li", "", item)));
-          details.append(list);
-        }
-        if (project.evidence) details.append(node("p", "project-evidence", localized(project.evidence)));
-        meta.append(details);
-      }
-      if (project.url) { const link = node("a", "project-link", language === "fa" ? "مشاهده پروژه ↗" : "View project ↗"); link.href = project.url; link.target = "_blank"; link.rel = "noreferrer"; meta.append(link); }
-      if (index >= visibleRecords.length) return;
-      target.append(card);
+      meta.append(node("span", "project-type", localized(project.category)),node("h3", "", localized(project.title)),node("p", "", localized(project.summary)));
+      if(project.organization || project.period) meta.append(node("p","project-org",[localized(project.organization),localized(project.period)].filter(Boolean).join(" · ")));
+      if(project.role) meta.append(node("p","project-role",localized(project.role)));
+      if(project.details || project.highlights) { const details=node("details","project-details"); details.append(node("summary","",language==="fa"?"جزئیات بیشتر":"More details")); if(project.details) details.append(node("p","",localized(project.details))); const hs=localized(project.highlights); if(Array.isArray(hs)){const ul=node("ul");hs.forEach(h=>ul.append(node("li","",h)));details.append(ul);}meta.append(details);}
+      const link=node("a","project-link",language==="fa"?"مشاهده پروژه ↗":"View project ↗");link.href=project.url||"https://example.com/";link.target="_blank";link.rel="noreferrer";meta.append(link);
+      card.append(art,meta);target.append(card);
     });
-    const toggle = document.getElementById("projectToggle");
-    if (toggle) { toggle.hidden = records.length <= 4; toggle.textContent = language === "fa" ? (showAllProjects ? copy.fa.showFewerProjects : copy.fa.showAllProjects) : (showAllProjects ? copy.en.showFewerProjects : copy.en.showAllProjects); }
-    if (!records.length) target.append(node("p", "section-note", language === "fa" ? "هنوز پروژه‌ای ثبت نشده است." : "No projects have been added yet."));
-  } catch (error) {
-    console.error("Projects:", error);
-    target.append(node("p", "section-note", language === "fa" ? "بارگذاری پروژه‌ها ناموفق بود." : "Projects could not be loaded."));
-  }
+    const toggle=document.getElementById("projectToggle");if(toggle){toggle.hidden=records.length<=4;toggle.textContent=language==="fa"?(showAllProjects?copy.fa.showFewerProjects:copy.fa.showAllProjects):(showAllProjects?copy.en.showFewerProjects:copy.en.showAllProjects);}
+  } catch(error){console.error("Projects:",error);target.append(node("p","section-note",language==="fa"?"بارگذاری پروژه‌ها ناموفق بود.":"Projects could not be loaded."));}
 }
+
 async function renderArticles() {
-  const target = document.getElementById("articleList");
-  if (!target) return;
-  target.replaceChildren();
-  try {
-    const manifest = await loadJson("./pcv/Articles/index.json");
-    const records = await Promise.all((manifest.items || []).map(slug =>
-      loadJson(`./pcv/Articles/${encodeURIComponent(slug)}/article.json`)
-    ));
-    records.forEach(article => {
-      const item = node("article", "article-item");
-      item.append(
-        node("span", "project-type", localized(article.category)),
-        node("h3", "", localized(article.title)),
-        node("p", "", localized(article.excerpt))
-      );
-      if (article.date) item.append(node("span", "article-date", localized(article.date)));
-      if (article.url) {
-        const link = node("a", "text-link", language === "fa" ? "مطالعه مقاله ↗" : "Read article ↗");
-        link.href = article.url;
-        link.target = "_blank";
-        link.rel = "noreferrer";
-        item.append(link);
-      }
-      target.append(item);
-    });
-    if (!records.length) {
-      const empty = node("div", "writing-placeholder");
-      empty.append(node("span", "writing-icon", "✳"));
-      const body = node("div");
-      body.append(
-        node("strong", "", language === "fa" ? "هنوز مقاله‌ای ثبت نشده است." : "No articles have been added yet."),
-        node("p", "", language === "fa" ? "پس از انتشار مقاله، پوشه آن را در Articles ثبت کنید." : "Add an article folder to Articles when a publication is ready.")
-      );
-      empty.append(body);
-      target.append(empty);
-    }
-  } catch (error) {
-    console.error("Articles:", error);
-    target.append(node("p", "section-note", language === "fa" ? "بارگذاری مقالات ناموفق بود." : "Articles could not be loaded."));
-  }
+ const target=document.getElementById("articleList");if(!target)return;target.replaceChildren();
+ try {
+  const manifest=await loadJson("./pcv/Articles/index.json");
+  const records=await Promise.all((manifest.items||[]).map(slug=>loadJson(`./pcv/Articles/${encodeURIComponent(slug)}/article.json`)));
+  records.forEach(article=>{
+   const item=node("article","article-item"),img=node("img","article-media");img.src=article.image||"./assets/images/article-placeholder.svg";img.alt=localized(article.title);
+   const body=node("div","article-content");body.append(node("span","project-type",localized(article.category)),node("h3","",localized(article.title)),node("p","",localized(article.excerpt)));
+   if(article.date)body.append(node("span","article-date",localized(article.date)));
+   const link=node("a","text-link",language==="fa"?"مطالعه مقاله ↗":"Read article ↗");link.href=article.url||"https://example.com/";link.target="_blank";link.rel="noreferrer";body.append(link);item.append(img,body);target.append(item);
+  });
+ }catch(error){console.error("Articles:",error);target.append(node("p","section-note",language==="fa"?"بارگذاری مقالات ناموفق بود.":"Articles could not be loaded."));}
 }
-async function renderCollection(folder, fileName, targetId, className) {
-  const target = document.getElementById(targetId);
-  if (!target) return;
-  target.replaceChildren();
-  try {
-    const manifest = await loadJson(`./pcv/${folder}/index.json`);
-    const records = await Promise.all((manifest.items || []).map(slug =>
-      loadJson(`./pcv/${folder}/${encodeURIComponent(slug)}/${fileName}`)
-    ));
-    records.forEach(record => {
-      const card = node("article", className);
-      const body = node("div");
-      const category = localized(record.category || record.type);
-      if (category) body.append(node("span", "project-type", category));
-      body.append(node("h3", "", localized(record.title || record.name)));
-      body.append(node("p", "", localized(record.summary || record.description)));
-      if (record.period) body.append(node("span", "article-date", localized(record.period)));
-      if (record.role) body.append(node("p", "project-role", localized(record.role)));
-      card.append(body);
-      target.append(card);
-    });
-    if (!records.length) target.append(node("p", "section-note", language === "fa" ? "محتوایی برای نمایش وجود ندارد." : "No entries yet."));
-  } catch (error) {
-    console.error(folder + ":", error);
-    target.append(node("p", "section-note", language === "fa" ? "بارگذاری اطلاعات ناموفق بود." : "Content could not be loaded."));
-  }
+
+async function renderCollection(folder,fileName,targetId,className){
+ const target=document.getElementById(targetId);if(!target)return;target.replaceChildren();
+ try{
+  const manifest=await loadJson(`./pcv/${folder}/index.json`);
+  const records=await Promise.all((manifest.items||[]).map(slug=>loadJson(`./pcv/${folder}/${encodeURIComponent(slug)}/${fileName}`)));
+  records.forEach(record=>{
+   const card=node("article",className),logo=node("img","company-logo");logo.src=record.logo||"./assets/images/company-placeholder.svg";logo.alt="";
+   const body=node("div","timeline-content");const category=localized(record.category||record.type);if(category)body.append(node("span","project-type",category));
+   body.append(node("h3","",localized(record.title||record.name)),node("p","",localized(record.summary||record.description)));
+   if(record.period)body.append(node("span","article-date",localized(record.period)));if(record.role)body.append(node("p","project-role",localized(record.role)));
+   const link=node("a","text-link",language==="fa"?"مشاهده مجموعه ↗":"View organization ↗");link.href=record.url||"https://example.com/";link.target="_blank";link.rel="noreferrer";body.append(link);
+   card.append(logo,body);target.append(card);
+  });
+ }catch(error){console.error(folder+":",error);target.append(node("p","section-note",language==="fa"?"بارگذاری اطلاعات ناموفق بود.":"Content could not be loaded."));}
 }
+
 async function renderProfile() {
   try {
     const profile = await loadJson("./pcv/About/profile.json");
@@ -207,6 +141,12 @@ async function renderSkills() {
     console.error("Skills:", error);
   }
 }
+function setupMotion(){
+ const items=document.querySelectorAll(".content-card,.side-card,.profile-card,.site-footer");
+ if(!("IntersectionObserver" in window)||window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+ const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("reveal-visible");observer.unobserve(entry.target);}}),{threshold:.08});
+ items.forEach(el=>{el.classList.add("reveal-pending");observer.observe(el);});
+}
 function renderAllContent() {
   renderProjects();
   renderArticles();
@@ -215,6 +155,7 @@ function renderAllContent() {
   renderCollection("Experience", "experience.json", "experienceList", "timeline-item");
   renderProfile();
   renderSkills();
+  setupMotion();
 }
 if (languageButton) languageButton.addEventListener("click", () => applyLanguage(language === "en" ? "fa" : "en"));
 if (themeButton) themeButton.addEventListener("click", () => applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark"));
