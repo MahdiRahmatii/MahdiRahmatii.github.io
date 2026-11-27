@@ -1,0 +1,580 @@
+{
+  "meta": {
+    "title": {
+      "en": "Mahdi Rahmati — Game Developer",
+      "fa": "مهدی رحمتی — توسعه‌دهنده بازی"
+    },
+    "description": {
+      "en": "Game developer and software engineer specializing in Unity, C#, gameplay systems and technical leadership.",
+      "fa": "توسعه‌دهنده بازی و نرم‌افزار با تخصص Unity، C#، سیستم‌های گیم‌پلی و مدیریت فنی."
+    }
+  },
+  "brand": "MAHDI RAHMATI",
+  "navigation": [
+    {
+      "id": "about",
+      "label": {
+        "en": "About",
+        "fa": "درباره من"
+      }
+    },
+    {
+      "id": "experience",
+      "label": {
+        "en": "Experience",
+        "fa": "سوابق"
+      }
+    },
+    {
+      "id": "projects",
+      "label": {
+        "en": "Projects",
+        "fa": "پروژه‌ها"
+      }
+    },
+    {
+      "id": "skills",
+      "label": {
+        "en": "Skills",
+        "fa": "مهارت‌ها"
+      }
+    },
+    {
+      "id": "teaching",
+      "label": {
+        "en": "Teaching",
+        "fa": "آموزش"
+      }
+    },
+    {
+      "id": "articles",
+      "label": {
+        "en": "Articles",
+        "fa": "مقالات"
+      }
+    }
+  ],
+  "profile": {
+    "name": {
+      "en": "Mahdi Rahmati",
+      "fa": "مهدی رحمتی"
+    },
+    "headline": {
+      "en": "Game Developer · Unity & C# Engineer · Technical Lead",
+      "fa": "توسعه‌دهنده بازی · برنامه‌نویس Unity و C# · مدیر فنی"
+    },
+    "image": "./assets/images/profile-placeholder.svg",
+    "availability": {
+      "en": "OPEN TO SELECT PROJECTS & COLLABORATIONS",
+      "fa": "آماده همکاری در پروژه‌های منتخب"
+    },
+    "actions": [
+      {
+        "label": {
+          "en": "Explore projects",
+          "fa": "مشاهده پروژه‌ها"
+        },
+        "href": "#projects",
+        "kind": "primary"
+      },
+      {
+        "label": {
+          "en": "Get in touch",
+          "fa": "ارتباط با من"
+        },
+        "href": "mailto:mahdirahmati.it@gmail.com",
+        "kind": "secondary"
+      },
+      {
+        "label": {
+          "en": "Telegram ↗",
+          "fa": "تلگرام ↗"
+        },
+        "href": "https://t.me/MRahmati",
+        "kind": "quiet",
+        "external": true
+      }
+    ]
+  },
+  "facts": [
+    {
+      "value": "2015",
+      "label": {
+        "en": "Professional game development journey",
+        "fa": "آغاز مسیر حرفه‌ای بازی‌سازی"
+      }
+    },
+    {
+      "value": "10+",
+      "label": {
+        "en": "Casual & hyper-casual game projects",
+        "fa": "پروژه بازی کژوال و هایپرکژوال"
+      }
+    },
+    {
+      "value": "30+",
+      "label": {
+        "en": "Game projects for performance campaigns",
+        "fa": "پروژه بازی برای کمپین‌های تبلیغاتی"
+      }
+    },
+    {
+      "value": "8+",
+      "label": {
+        "en": "Years of game development experience",
+        "fa": "سال تجربه در توسعه بازی"
+      }
+    }
+  ],
+  "sections": {
+    "about": {
+      "title": {
+        "en": "About",
+        "fa": "درباره من"
+      },
+      "subtitle": {
+        "en": "A little about my work and approach",
+        "fa": "نگاهی کوتاه به مسیر و رویکرد کاری من"
+      },
+      "body": {
+        "en": "I'm a game and software developer with professional experience dating back to 2015. My work spans Unity and C#, gameplay programming, online systems, technical problem-solving, and team collaboration.",
+        "fa": "من توسعه‌دهنده بازی و نرم‌افزار هستم و سابقه حرفه‌ای فعالیتم در این حوزه به سال ۲۰۱۵ بازمی‌گردد. حوزه کاری من شامل Unity و C#، برنامه‌نویسی گیم‌پلی، سیستم‌های آنلاین، حل مسائل فنی و همکاری و هدایت تیم‌هاست."
+      },
+      "extra": {
+        "en": "I also enjoy teaching, mentoring, and helping small teams turn ideas into clear, achievable project plans.",
+        "fa": "به آموزش و منتورینگ نیز علاقه‌مندم و به تیم‌های کوچک کمک می‌کنم ایده‌هایشان را به برنامه‌های اجرایی روشن و دست‌یافتنی تبدیل کنند."
+      }
+    },
+    "experience": {
+      "title": {
+        "en": "Experience & roles",
+        "fa": "سوابق و مسئولیت‌ها"
+      },
+      "subtitle": {
+        "en": "Professional roles and collaborations",
+        "fa": "سوابق حرفه‌ای و همکاری‌ها"
+      }
+    },
+    "projects": {
+      "title": {
+        "en": "Projects",
+        "fa": "پروژه‌ها"
+      },
+      "subtitle": {
+        "en": "Selected game development work and technical contributions.",
+        "fa": "گزیده‌ای از پروژه‌های بازی‌سازی و فعالیت‌های فنی."
+      },
+      "showAll": {
+        "en": "Show all projects",
+        "fa": "مشاهده همه پروژه‌ها"
+      },
+      "showLess": {
+        "en": "Show fewer projects",
+        "fa": "نمایش موارد کمتر"
+      },
+      "more": {
+        "en": "More details",
+        "fa": "جزئیات بیشتر"
+      },
+      "view": {
+        "en": "View project ↗",
+        "fa": "مشاهده پروژه ↗"
+      }
+    },
+    "services": {
+      "title": {
+        "en": "Services",
+        "fa": "خدمات"
+      },
+      "subtitle": {
+        "en": "Ways I can contribute to a project or team",
+        "fa": "زمینه‌هایی که می‌توانم در آن‌ها به پروژه یا تیم کمک کنم"
+      }
+    },
+    "teaching": {
+      "title": {
+        "en": "Teaching & mentoring",
+        "fa": "آموزش و منتورینگ"
+      },
+      "subtitle": {
+        "en": "Courses, workshops and educational activities",
+        "fa": "دوره‌ها، کارگاه‌ها و فعالیت‌های آموزشی"
+      }
+    },
+    "articles": {
+      "title": {
+        "en": "Articles & writing",
+        "fa": "مقالات و یادداشت‌ها"
+      },
+      "subtitle": {
+        "en": "Notes on game development, software and technology",
+        "fa": "یادداشت‌هایی درباره بازی‌سازی، نرم‌افزار و فناوری"
+      },
+      "view": {
+        "en": "Read article ↗",
+        "fa": "مطالعه مقاله ↗"
+      }
+    },
+    "skills": {
+      "title": {
+        "en": "Skills & expertise",
+        "fa": "مهارت‌ها و تخصص‌ها"
+      }
+    },
+    "education": {
+      "title": {
+        "en": "Education",
+        "fa": "تحصیلات"
+      },
+      "items": [
+        {
+          "title": {
+            "en": "Computer Engineering",
+            "fa": "مهندسی کامپیوتر"
+          },
+          "subtitle": {
+            "en": "Islamic Azad University",
+            "fa": "دانشگاه آزاد اسلامی"
+          }
+        },
+        {
+          "title": {
+            "en": "CS50",
+            "fa": "CS50"
+          },
+          "subtitle": {
+            "en": "Harvard University · Programming",
+            "fa": "دانشگاه هاروارد · برنامه‌نویسی"
+          }
+        }
+      ]
+    },
+    "contact": {
+      "title": {
+        "en": "Let's connect",
+        "fa": "راه‌های ارتباطی"
+      },
+      "description": {
+        "en": "For project inquiries, collaboration and professional conversations.",
+        "fa": "برای پیشنهاد همکاری، پروژه و گفت‌وگوهای حرفه‌ای."
+      },
+      "items": [
+        {
+          "label": "mahdirahmati.it@gmail.com",
+          "href": "mailto:mahdirahmati.it@gmail.com"
+        },
+        {
+          "label": "09134458540",
+          "href": "tel:+989134458540",
+          "ltr": true
+        },
+        {
+          "label": "Telegram ↗",
+          "href": "https://t.me/MRahmati",
+          "external": true
+        },
+        {
+          "label": "GitHub ↗",
+          "href": "https://github.com/MahdiRahmatii",
+          "external": true
+        }
+      ]
+    }
+  },
+  "experienceItems": [
+    {
+      "company": "LifeLand (Rubrut)",
+      "logo": "./assets/images/company-placeholder.svg",
+      "period": "May 2024 – approx. March 2025",
+      "role": {
+        "en": "Senior Game Developer & Project Manager",
+        "fa": "برنامه‌نویس ارشد بازی و مدیر پروژه"
+      },
+      "description": {
+        "en": "Game development and project coordination.",
+        "fa": "توسعه بازی و هماهنگی پروژه."
+      }
+    },
+    {
+      "company": "Fani Entertainment",
+      "logo": "./assets/images/company-placeholder.svg",
+      "period": "December 2023 – June 2024",
+      "role": {
+        "en": "Senior Game Developer & Project Manager Consultant",
+        "fa": "برنامه‌نویس ارشد بازی و مشاور مدیریت پروژه"
+      },
+      "description": {
+        "en": "Senior game-development and project-management consulting role.",
+        "fa": "همکاری در جایگاه برنامه‌نویس ارشد بازی و مشاور مدیریت پروژه."
+      }
+    },
+    {
+      "company": "Pendar.io",
+      "logo": "./assets/images/company-placeholder.svg",
+      "period": "September 2021 – December 2023",
+      "role": {
+        "en": "Game Developer → Senior Game Developer",
+        "fa": "برنامه‌نویس بازی ← برنامه‌نویس ارشد بازی"
+      },
+      "description": {
+        "en": "Contributed to more than 10 casual and hyper-casual projects.",
+        "fa": "مشارکت در بیش از ۱۰ پروژه کژوال و هایپرکژوال."
+      }
+    },
+    {
+      "company": "Glim Games",
+      "logo": "./assets/images/company-placeholder.svg",
+      "period": "March 2021 – December 2021",
+      "role": {
+        "en": "Game Developer",
+        "fa": "برنامه‌نویس بازی"
+      },
+      "description": {
+        "en": "Worked on more than 30 CTR and CPI game projects.",
+        "fa": "فعالیت در بیش از ۳۰ پروژه بازی CTR و CPI."
+      }
+    },
+    {
+      "company": "Loomana · Unbound · Revenant",
+      "logo": "./assets/images/company-placeholder.svg",
+      "period": "2020 – 2023",
+      "role": {
+        "en": "Game Developer",
+        "fa": "برنامه‌نویس بازی"
+      },
+      "description": {
+        "en": "Game-development engagements across multiple studios; periods overlap with other roles.",
+        "fa": "همکاری در توسعه بازی با چند استودیو؛ برخی بازه‌ها با سوابق دیگر هم‌پوشانی دارند."
+      }
+    },
+    {
+      "company": "BlueAge Team · Benisi Media",
+      "logo": "./assets/images/company-placeholder.svg",
+      "period": "2015 – 2020",
+      "role": {
+        "en": "Game Developer · Founder / Developer",
+        "fa": "برنامه‌نویس بازی · مؤسس و توسعه‌دهنده"
+      },
+      "description": {
+        "en": "Early professional game-development experience.",
+        "fa": "سوابق اولیه فعالیت حرفه‌ای در توسعه بازی."
+      }
+    }
+  ],
+  "projectsItems": [
+    {
+      "title": {
+        "en": "Casual & Hyper-casual Game Portfolio",
+        "fa": "مجموعه پروژه‌های کژوال و هایپرکژوال"
+      },
+      "category": {
+        "en": "Game Development · Casual · Hyper-casual",
+        "fa": "بازی‌سازی · کژوال · هایپرکژوال"
+      },
+      "summary": {
+        "en": "Contributed to the development of more than 10 casual and hyper-casual game projects.",
+        "fa": "مشارکت در توسعه بیش از ۱۰ پروژه بازی کژوال و هایپرکژوال."
+      },
+      "details": {
+        "en": "The CV records consecutive Game Developer and Senior Game Developer roles from September 2021 to December 2023. Individual game titles are not listed.",
+        "fa": "رزومه دو بازه متوالی برنامه‌نویس بازی و برنامه‌نویس ارشد را از سپتامبر ۲۰۲۱ تا دسامبر ۲۰۲۳ ثبت کرده است. نام بازی‌های مستقل ذکر نشده است."
+      },
+      "image": "./assets/images/project-placeholder.svg",
+      "url": "https://example.com/pendar-casual-hypercasual"
+    },
+    {
+      "title": {
+        "en": "CTR & CPI Game Projects",
+        "fa": "پروژه‌های بازی با شاخص‌های CTR و CPI"
+      },
+      "category": {
+        "en": "Game Development · Performance Marketing",
+        "fa": "بازی‌سازی · بازاریابی عملکردمحور"
+      },
+      "summary": {
+        "en": "Worked on more than 30 CTR and CPI game projects.",
+        "fa": "فعالیت در بیش از ۳۰ پروژه بازی CTR و CPI."
+      },
+      "details": {
+        "en": "The CV lists a Game Developer role from March to December 2021. Individual project names and campaign results are not provided.",
+        "fa": "رزومه همکاری به‌عنوان برنامه‌نویس بازی را از مارس تا دسامبر ۲۰۲۱ ثبت کرده است. نام پروژه‌ها و نتایج کمپین‌ها مشخص نشده‌اند."
+      },
+      "image": "./assets/images/project-placeholder.svg",
+      "url": "https://example.com/glim-ctr-cpi"
+    },
+    {
+      "title": {
+        "en": "Passenger Sorting Puzzle MVP",
+        "fa": "MVP بازی مرتب‌سازی مسافران"
+      },
+      "category": {
+        "en": "Android · Casual Puzzle · MVP",
+        "fa": "اندروید · پازل کژوال · MVP"
+      },
+      "summary": {
+        "en": "A completed Android MVP inspired by the passenger and bus sorting puzzle genre.",
+        "fa": "یک MVP تکمیل‌شده اندرویدی با الهام از سبک مرتب‌سازی مسافران و اتوبوس‌ها."
+      },
+      "details": {
+        "en": "Full technical implementation; art and visual design excluded.",
+        "fa": "پیاده‌سازی کامل بخش فنی؛ طراحی و تولید آرت خارج از مسئولیت من بوده است."
+      },
+      "image": "./assets/images/project-placeholder.svg",
+      "url": "https://example.com/bus-puzzle-mvp"
+    },
+    {
+      "title": {
+        "en": "Rail Route Puzzle MVP",
+        "fa": "MVP بازی پازل مسیر قطار"
+      },
+      "category": {
+        "en": "Android · Casual Puzzle · MVP",
+        "fa": "اندروید · پازل کژوال · MVP"
+      },
+      "summary": {
+        "en": "A completed Android casual puzzle MVP inspired by Railwood and train-route mechanics.",
+        "fa": "یک MVP تکمیل‌شده اندرویدی در سبک پازل کژوال با الهام از Railwood و مکانیک مسیر قطار."
+      },
+      "details": {
+        "en": "Full technical implementation; art and visual design excluded.",
+        "fa": "پیاده‌سازی کامل بخش فنی؛ طراحی و تولید آرت خارج از مسئولیت من بوده است."
+      },
+      "image": "./assets/images/project-placeholder.svg",
+      "url": "https://example.com/rail-puzzle-mvp"
+    }
+  ],
+  "servicesItems": [
+    {
+      "title": {
+        "en": "Unity Development",
+        "fa": "توسعه با Unity"
+      },
+      "description": {
+        "en": "Gameplay systems, features and production-ready implementation.",
+        "fa": "پیاده‌سازی سیستم‌های گیم‌پلی، قابلیت‌ها و بخش‌های آماده تولید."
+      }
+    },
+    {
+      "title": {
+        "en": "Game Prototyping",
+        "fa": "ساخت نمونه اولیه بازی"
+      },
+      "description": {
+        "en": "Rapid prototypes to validate mechanics and product direction.",
+        "fa": "ساخت نمونه اولیه سریع برای اعتبارسنجی مکانیک‌ها و مسیر محصول."
+      }
+    },
+    {
+      "title": {
+        "en": "Technical Consulting",
+        "fa": "مشاوره فنی"
+      },
+      "description": {
+        "en": "Architecture, debugging and technical problem-solving.",
+        "fa": "معماری نرم‌افزار، رفع اشکال و حل مسائل فنی."
+      }
+    },
+    {
+      "title": {
+        "en": "Optimization",
+        "fa": "بهینه‌سازی"
+      },
+      "description": {
+        "en": "Performance analysis and optimization for Unity projects.",
+        "fa": "تحلیل عملکرد و بهینه‌سازی پروژه‌های Unity."
+      }
+    }
+  ],
+  "teachingItems": [
+    {
+      "title": {
+        "en": "Unity Programming",
+        "fa": "آموزش برنامه‌نویسی Unity"
+      },
+      "description": {
+        "en": "Teaching programming fundamentals and practical Unity development.",
+        "fa": "آموزش مبانی برنامه‌نویسی و توسعه عملی با Unity."
+      },
+      "image": "./assets/images/article-placeholder.svg"
+    }
+  ],
+  "articlesItems": [
+    {
+      "title": {
+        "en": "A Practical Approach to Building Game Systems",
+        "fa": "رویکردی عملی برای ساخت سیستم‌های بازی"
+      },
+      "category": {
+        "en": "Game Development · Technical Notes",
+        "fa": "بازی‌سازی · یادداشت فنی"
+      },
+      "description": {
+        "en": "A sample article entry demonstrating the portfolio’s article layout, thumbnail, bilingual content and external reading link. Replace this placeholder with a real publication later.",
+        "fa": "این مقاله آزمایشی برای نمایش قالب مقالات، تصویر شاخص، محتوای دوزبانه و لینک مطالعه است. بعداً متن و نشانی واقعی را جایگزین کن."
+      },
+      "date": {
+        "en": "Sample article · 2026",
+        "fa": "مقاله آزمایشی · ۱۴۰۵"
+      },
+      "image": "./assets/images/article-placeholder.svg",
+      "url": "https://example.com/sample-game-development-article"
+    }
+  ],
+  "skills": [
+    "Unity",
+    "C#",
+    "OOP / SOLID",
+    "Gameplay Programming",
+    "Multiplayer",
+    "Photon",
+    "PlayFab",
+    "Mirror",
+    "WebGL",
+    "Optimization",
+    "Git",
+    "Project Management",
+    "Technical Leadership",
+    "Teaching",
+    "Photoshop"
+  ],
+  "footer": {
+    "copyright": "©",
+    "name": "MAHDI RAHMATI",
+    "note": {
+      "en": "Designed & built with care.",
+      "fa": "با دقت طراحی و ساخته شده است."
+    },
+    "top": {
+      "en": "Back to top ↑",
+      "fa": "بازگشت به بالا ↑"
+    }
+  },
+  "brandMark": "MR",
+  "ui": {
+    "contact": {
+      "en": "Contact",
+      "fa": "ارتباط"
+    },
+    "phone": "09134458540",
+    "theme": {
+      "light": "☾",
+      "dark": "☀",
+      "lightTitle": {
+        "en": "Switch to dark theme",
+        "fa": "فعال‌سازی حالت تاریک"
+      },
+      "darkTitle": {
+        "en": "Switch to light theme",
+        "fa": "فعال‌سازی حالت روشن"
+      }
+    },
+    "language": {
+      "en": "فا / EN",
+      "fa": "EN / فا"
+    },
+    "loadError": {
+      "en": "The portfolio content could not be loaded. Please try again later.",
+      "fa": "بارگذاری محتوای سایت ناموفق بود. لطفاً بعداً دوباره تلاش کنید."
+    }
+  }
+}
