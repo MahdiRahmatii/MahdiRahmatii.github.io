@@ -82,7 +82,6 @@ html[data-theme="dark"] .side-link{border-color:var(--line)}
 
 /* Refined profile layout */
 :root{--page:#f4f6f9;--surface:#fff;--text:#202833;--muted:#687789;--line:#dce3eb;--accent:#1769aa;--accent-soft:#e8f2fb}
-html[data-theme=dark{color-scheme:dark}
 html[data-theme="dark"]{--page:#111821;--surface:#1a2531;--text:#e8eef5;--muted:#aab7c5;--line:#304050;--accent:#75b9f0;--accent-soft:#20394f;color-scheme:dark}
 body{background:var(--page);color:var(--text);font-size:16px;line-height:1.8}
 .topbar{background:color-mix(in srgb,var(--surface) 92%,transparent);border-color:var(--line)}
