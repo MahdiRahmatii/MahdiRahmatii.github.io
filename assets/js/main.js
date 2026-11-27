@@ -1,6 +1,6 @@
 const copy = {
 en: {
-navAbout:"About",navWork:"Work",navExperience:"Experience",navWriting:"Writing",navContact:"Contact",
+navAbout:"About",navWork:"Work",navExperience:"Experience",navWriting:"Writing",navContact:"Contact",navTeaching:"Teaching",remote:"Open to remote collaboration",statGlim:"CTR & CPI projects at Glim Games",statYears:"Years of game development experience",aboutSubtitle:"A little about my work and approach",aboutExtra:"I also enjoy teaching, mentoring, and helping small teams turn ideas into clear, achievable project plans.",servicesTitle:"Services",servicesSubtitle:"Ways I can contribute to a project or team",teachingTitle:"Teaching & mentoring",teachingSubtitle:"Courses, workshops and educational activities",educationTitle:"Education",educationDegree:"Computer Engineering",educationCertificate:"Harvard CS50",educationCertificateSub:"Programming Certificate",connectTitle:"Let’s connect",connectText:"For project inquiries, collaboration and professional conversations.",backToTop:"Back to top ↑",showAllProjects:"Show all projects",showFewerProjects:"Show fewer projects",
 availability:"OPEN TO SELECT PROJECTS & COLLABORATIONS",hello:"Hello, I'm",role:"Game Developer · Unity & C# Engineer · Technical Lead",intro:"I build gameplay systems and reliable software, turning ideas into polished, playable experiences.",viewWork:"Explore my work",getInTouch:"Get in touch",visualCaption:"ENGINEERING PLAYFUL EXPERIENCES",scroll:"SCROLL TO EXPLORE",
 aboutLabel:"PROFILE",aboutTitle:"Engineering games.<br><em>Solving real problems.</em>",aboutText:"I'm a game and software developer with professional experience dating back to 2015. My work spans Unity and C#, gameplay programming, online systems, technical problem-solving, and team collaboration.",statSince:"Developing games since",statProjects:"Casual & hyper-casual projects at Pendar (CV)",statRoles:"Development · Project · Technical",
 workLabel:"SELECTED WORK",workTitle:"Selected projects",workSub:"A selection of game development work and technical contributions.",projectMvp:"ANDROID · CASUAL PUZZLE · MVP",busTitle:"Passenger Sorting Puzzle",busDesc:"A completed Android game MVP inspired by the passenger and bus sorting puzzle genre. Full technical implementation, excluding art and visual design.",projectMvp2:"ANDROID · CASUAL PUZZLE · MVP",railTitle:"Railwood-inspired Puzzle",railDesc:"A second completed casual game MVP, based on route and train puzzle mechanics. Full technical implementation, excluding art and visual design.",projectWebgl:"MULTIPLAYER · WEBGL",onlineTitle:"Online Game Systems",onlineDesc:"Experience in multiplayer online system programming and browser-based game development.",projectTools:"UNITY · GAME SYSTEMS",modularTitle:"Modular Game Systems",modularDesc:"Development of reusable, modular systems and support for multiple casual and hyper-casual game projects.",portfolioNote:"Project visuals and detailed case studies will be added from the original media archive.",
@@ -8,7 +8,7 @@ experienceLabel:"BACKGROUND",experienceTitle:"Experience & roles",lifeRole:"Seni
 skillsLabel:"CAPABILITIES",skillsTitle:"Tools & expertise",writingLabel:"NOTES & IDEAS",writingTitle:"Writing & learning",writingSub:"Technical notes and articles on game development, software, and emerging technology.",writingComing:"Articles are being organized.",writingComingSub:"The blog will grow with practical notes, project breakdowns, and lessons learned.",contactLabel:"LET'S CONNECT",contactEyebrow:"HAVE A PROJECT IN MIND?",contactTitle:"Let's build<br><em>something meaningful.</em>",contactText:"Available for selected Unity development projects, technical collaboration, and teaching opportunities.",footer:"Designed & built with care."
 },
 fa: {
-navAbout:"درباره من",navWork:"نمونه‌کارها",navExperience:"سوابق",navWriting:"یادداشت‌ها",navContact:"ارتباط",
+navAbout:"درباره من",navWork:"نمونه‌کارها",navExperience:"سوابق",navWriting:"مقالات",navContact:"ارتباط",navTeaching:"آموزش",remote:"آماده همکاری دورکاری",statGlim:"پروژه‌های CTR و CPI در گلیم گیمز",statYears:"سال تجربه در بازی‌سازی",aboutSubtitle:"نگاهی کوتاه به مسیر و رویکرد کاری من",aboutExtra:"به آموزش و منتورینگ نیز علاقه‌مندم و به تیم‌های کوچک کمک می‌کنم ایده‌هایشان را به برنامه‌های اجرایی روشن و دست‌یافتنی تبدیل کنند.",servicesTitle:"خدمات",servicesSubtitle:"زمینه‌هایی که می‌توانم در آن‌ها به پروژه یا تیم کمک کنم",teachingTitle:"آموزش و منتورینگ",teachingSubtitle:"دوره‌ها، کارگاه‌ها و فعالیت‌های آموزشی",educationTitle:"تحصیلات",educationDegree:"مهندسی کامپیوتر",educationCertificate:"دوره CS50 دانشگاه هاروارد",educationCertificateSub:"گواهی آموزش برنامه‌نویسی",connectTitle:"راه‌های ارتباطی",connectText:"برای پیشنهاد همکاری، پروژه و گفت‌وگوهای حرفه‌ای.",backToTop:"بازگشت به بالا ↑",showAllProjects:"مشاهده همه پروژه‌ها",showFewerProjects:"نمایش موارد کمتر",
 availability:"آماده همکاری در پروژه‌های منتخب",hello:"سلام، من",role:"توسعه‌دهنده بازی · برنامه‌نویس Unity و C# · مدیر فنی",intro:"سیستم‌های گیم‌پلی و نرم‌افزارهای قابل اتکا می‌سازم و ایده‌ها را به تجربه‌هایی قابل بازی تبدیل می‌کنم.",viewWork:"مشاهده نمونه‌کارها",getInTouch:"ارتباط با من",visualCaption:"مهندسی تجربه‌های تعاملی",scroll:"برای مشاهده بیشتر اسکرول کنید",
 aboutLabel:"معرفی",aboutTitle:"توسعه بازی؛<br><em>حل مسئله‌های واقعی.</em>",aboutText:"من توسعه‌دهنده بازی و نرم‌افزار هستم و سابقه حرفه‌ای فعالیتم در این حوزه به سال ۲۰۱۵ بازمی‌گردد. حوزه کاری من شامل Unity و C#، برنامه‌نویسی گیم‌پلی، سیستم‌های آنلاین، حل مسائل فنی و همکاری و هدایت تیم‌هاست.",statSince:"شروع فعالیت در بازی‌سازی",statProjects:"پروژه کژوال و هایپرکژوال در پندار (طبق رزومه)",statRoles:"توسعه · مدیریت پروژه · مدیریت فنی",
 workLabel:"منتخب پروژه‌ها",workTitle:"نمونه‌کارها",workSub:"گزیده‌ای از پروژه‌های بازی‌سازی و فعالیت‌های فنی.",projectMvp:"اندروید · پازل کژوال · MVP",busTitle:"بازی مرتب‌سازی مسافران",busDesc:"یک MVP تکمیل‌شده برای اندروید، الهام‌گرفته از سبک مرتب‌سازی مسافران و اتوبوس‌ها. پیاده‌سازی تمام بخش‌های فنی به‌جز طراحی و تولید آرت.",projectMvp2:"اندروید · پازل کژوال · MVP",railTitle:"بازی الهام‌گرفته از Railwood",railDesc:"دومین MVP تکمیل‌شده در سبک کژوال با مکانیک‌های مرتبط با مسیر و قطار. پیاده‌سازی تمام بخش‌های فنی به‌جز طراحی و تولید آرت.",projectWebgl:"چندنفره · WEBGL",onlineTitle:"سیستم‌های بازی آنلاین",onlineDesc:"تجربه برنامه‌نویسی سیستم‌های آنلاین چندنفره و توسعه بازی‌های مبتنی بر مرورگر.",projectTools:"یونیتی · سیستم‌های بازی",modularTitle:"سیستم‌های ماژولار بازی",modularDesc:"توسعه سیستم‌های ماژولار و قابل استفاده مجدد و همکاری فنی در پروژه‌های متعدد کژوال و هایپرکژوال.",portfolioNote:"تصاویر پروژه‌ها و شرح‌مطالعات دقیق‌تر، از آرشیو رسانه‌ای اصلی اضافه خواهند شد.",
@@ -17,6 +17,15 @@ skillsLabel:"توانمندی‌ها",skillsTitle:"ابزارها و تخصص‌
 }
 };
 const languageKey = "site-language";
+const themeKey = "site-theme";
+const themeButton = document.getElementById("themeToggle");
+function applyTheme(next) {
+  const theme = next === "dark" ? "dark" : "light";
+  document.documentElement.dataset.theme = theme;
+  if (themeButton) { themeButton.textContent = theme === "dark" ? "☀" : "☾"; themeButton.setAttribute("aria-label", theme === "dark" ? "Switch to light theme" : "Switch to dark theme"); themeButton.title = theme === "dark" ? "Light theme" : "Dark theme"; }
+  localStorage.setItem(themeKey, theme);
+}
+
 let language = localStorage.getItem(languageKey) === "fa" ? "fa" : "en";
 const languageButton = document.getElementById("langToggle");
 const contentRoot = ".";
@@ -49,6 +58,7 @@ function applyLanguage(next) {
   localStorage.setItem(languageKey, language);
   renderAllContent();
 }
+let showAllProjects = false;
 async function renderProjects() {
   const target = document.getElementById("projectGrid");
   if (!target) return;
@@ -58,6 +68,7 @@ async function renderProjects() {
     const records = await Promise.all((manifest.items || []).map(slug =>
       loadJson(`./pcv/Projects/${encodeURIComponent(slug)}/project.json`)
     ));
+    const visibleRecords = showAllProjects ? records : records.slice(0, 4);
     records.forEach((project, index) => {
       const card = node("article", "project-card");
       const art = node("div", `project-art project-art-data project-art-${index % 4}`);
@@ -87,8 +98,12 @@ async function renderProjects() {
         if (project.evidence) details.append(node("p", "project-evidence", localized(project.evidence)));
         meta.append(details);
       }
+      if (project.url) { const link = node("a", "project-link", language === "fa" ? "مشاهده پروژه ↗" : "View project ↗"); link.href = project.url; link.target = "_blank"; link.rel = "noreferrer"; meta.append(link); }
+      if (index >= visibleRecords.length) return;
       target.append(card);
     });
+    const toggle = document.getElementById("projectToggle");
+    if (toggle) { toggle.hidden = records.length <= 4; toggle.textContent = language === "fa" ? (showAllProjects ? copy.fa.showFewerProjects : copy.fa.showAllProjects) : (showAllProjects ? copy.en.showFewerProjects : copy.en.showAllProjects); }
     if (!records.length) target.append(node("p", "section-note", language === "fa" ? "هنوز پروژه‌ای ثبت نشده است." : "No projects have been added yet."));
   } catch (error) {
     console.error("Projects:", error);
@@ -202,6 +217,10 @@ function renderAllContent() {
   renderSkills();
 }
 if (languageButton) languageButton.addEventListener("click", () => applyLanguage(language === "en" ? "fa" : "en"));
+if (themeButton) themeButton.addEventListener("click", () => applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark"));
+const projectToggle = document.getElementById("projectToggle");
+if (projectToggle) projectToggle.addEventListener("click", () => { showAllProjects = !showAllProjects; renderProjects(); });
+applyTheme(localStorage.getItem(themeKey) || "light");
 const year = document.getElementById("year");
 if (year) year.textContent = new Date().getFullYear();
 applyLanguage(language);
