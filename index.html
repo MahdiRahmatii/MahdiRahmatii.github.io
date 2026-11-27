@@ -3,82 +3,116 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#090d16">
-  <meta name="description" content="Mahdi Rahmati — Game Developer, Unity & C# Engineer, Technical Lead and Instructor.">
-  <title>Mahdi Rahmati — Game Developer & Software Engineer</title>
+  <meta name="theme-color" content="#f3f5f8">
+  <meta name="description" content="Mahdi Rahmati — Game Developer, Software Developer, Team Manager and Instructor.">
+  <title>Mahdi Rahmati — Professional Profile</title>
   <link rel="stylesheet" href="./assets/css/style.css">
   <script defer src="./assets/js/main.js"></script>
 </head>
 <body>
-  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
-  <header class="site-header">
-    <a class="brand" href="#home" aria-label="Mahdi Rahmati home"><span class="brand-mark">M<span>R</span></span><span>MAHDI RAHMATI</span></a>
-    <nav class="main-nav" aria-label="Main navigation">
-      <a href="#work">Projects</a><a href="#services">Services</a><a href="#experience">Experience</a><a href="#teaching">Teaching</a><a href="#writing">Articles</a><a href="#about">About</a><a href="#contact">Contact</a>
-    </nav>
-    <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">فا / EN</button>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#home" aria-label="Mahdi Rahmati home"><span class="brand-mark">MR</span><span>MAHDI RAHMATI</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#about" data-i18n="navAbout">About</a>
+        <a href="#experience" data-i18n="navExperience">Experience</a>
+        <a href="#work" data-i18n="navWork">Projects</a>
+        <a href="#skills" data-i18n="skillsLabel">Skills</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#writing" data-i18n="navWriting">Articles</a>
+      </nav>
+      <div class="topbar-actions">
+        <a class="contact-top" href="#contact" data-i18n="navContact">Contact</a>
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">فا / EN</button>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <section class="hero section-wrap" id="home">
-      <div class="hero-copy">
-        <div class="eyebrow"><span class="status-dot"></span><span data-i18n="availability">OPEN TO SELECT PROJECTS & COLLABORATIONS</span></div>
-        <p class="hero-kicker" data-i18n="hello">Hello, I'm</p>
-        <h1>Mahdi<br><span>Rahmati</span><i class="cursor">_</i></h1>
-        <p class="hero-role" data-i18n="role">Game Developer · Unity & C# Engineer · Technical Lead</p>
-        <p class="hero-intro" data-i18n="intro">I build gameplay systems and reliable software, turning ideas into polished, playable experiences.</p>
-        <div class="hero-actions"><a class="button button-primary" href="#work" data-i18n="viewWork">Explore my work <span>↗</span></a><a class="text-link" href="#contact" data-i18n="getInTouch">Get in touch <span>→</span></a></div>
+  <main class="page-shell" id="home">
+    <section class="profile-card card">
+      <div class="cover-banner" aria-label="Portfolio cover banner">
+        <div class="cover-orbit cover-orbit-one"></div>
+        <div class="cover-orbit cover-orbit-two"></div>
+        <span class="cover-caption">GAME DEVELOPMENT · SOFTWARE · CREATIVE TECHNOLOGY</span>
       </div>
-      <div class="hero-visual" aria-label="Profile and game development visual"><div class="profile-placeholder" id="profileVisual"><span>MR</span></div>
-        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div>
-        <div class="core"><span class="core-symbol">{"</span><strong>UNITY</strong><small>CREATE · BUILD · PLAY</small></div>
-        <span class="float-tag tag-one">C#</span><span class="float-tag tag-two">GAMEPLAY</span><span class="float-tag tag-three">SYSTEMS</span>
-        <div class="visual-caption"><span>01 / 04</span><span data-i18n="visualCaption">ENGINEERING PLAYFUL EXPERIENCES</span></div>
+      <div class="profile-main">
+        <div class="profile-avatar" id="profileVisual"><span>MR</span></div>
+        <div class="profile-heading">
+          <div class="availability"><span class="status-dot"></span><span data-i18n="availability">OPEN TO SELECT PROJECTS & COLLABORATIONS</span></div>
+          <h1>Mahdi Rahmati</h1>
+          <p class="profile-role" data-i18n="role">Game Developer · Unity & C# Engineer · Technical Lead</p>
+          <p class="profile-location">Qom, Iran <span>·</span> <span data-i18n="remote">Open to remote collaboration</span></p>
+          <div class="profile-actions">
+            <a class="button button-primary" href="#work" data-i18n="viewWork">Explore my work</a>
+            <a class="button button-secondary" href="mailto:mahdirahmati.it@gmail.com" data-i18n="getInTouch">Get in touch</a>
+            <a class="button button-quiet" href="https://t.me/MRahmati" target="_blank" rel="noreferrer">Telegram ↗</a>
+          </div>
+        </div>
       </div>
-      <div class="hero-bottom"><span data-i18n="scroll">SCROLL TO EXPLORE</span><span class="line"></span><span>QOM · IRAN</span></div>
-    </section>
-
-    <section class="section-wrap intro-grid" id="about">
-      <div class="section-label"><span>01</span><span data-i18n="aboutLabel">PROFILE</span></div>
-      <div class="section-content">
-        <h2 data-i18n="aboutTitle">Engineering games.<br><em>Solving real problems.</em></h2>
-        <p class="lead" data-i18n="aboutText">I'm a game and software developer with professional experience dating back to 2015. My work spans Unity and C#, gameplay programming, online systems, technical problem-solving, and team collaboration.</p>
-        <div class="stats-row"><div><strong>2015</strong><span data-i18n="statSince">Developing games since</span></div><div><strong>10+</strong><span data-i18n="statProjects">Casual & hyper-casual projects at Pendar (CV)</span></div><div><strong>3</strong><span data-i18n="statRoles">Development · Project · Technical</span></div></div>
-      </div>
-    </section>
-
-    <section class="section-wrap work-section" id="work">
-      <div class="section-heading"><div class="section-label"><span>02</span><span data-i18n="workLabel">SELECTED WORK</span></div><h2 data-i18n="workTitle">Selected projects<span class="accent">.</span></h2><p data-i18n="workSub">A selection of game development work and technical contributions.</p></div>
-      <div class="project-grid" id="projectGrid" aria-live="polite"></div>
-      <p class="section-note" data-i18n="portfolioNote">Project entries are loaded from individual folders inside Projects/.</p>
-    </section>
-
-    <section class="section-wrap services-section" id="services"><div class="section-heading"><div class="section-label"><span>03</span><span>SERVICES</span></div><h2>How I can help<span class="accent">.</span></h2><p>Technical services and collaboration opportunities.</p></div><div id="serviceGrid" class="service-grid" aria-live="polite"></div></section>
-
-    <section class="section-wrap experience-section" id="experience">
-      <div class="section-label"><span>03</span><span data-i18n="experienceLabel">BACKGROUND</span></div>
-      <div class="experience-content"><h2 data-i18n="experienceTitle">Experience & roles<span class="accent">.</span></h2>
-        <div class="timeline" id="experienceList" aria-live="polite"></div>
+      <div class="profile-facts">
+        <div><strong>2015</strong><span data-i18n="statSince">Developing games since</span></div>
+        <div><strong>10+</strong><span data-i18n="statProjects">Casual & hyper-casual projects at Pendar</span></div>
+        <div><strong>30+</strong><span data-i18n="statGlim">CTR & CPI projects at Glim Games</span></div>
+        <div><strong>8+</strong><span data-i18n="statYears">Years of game development experience</span></div>
       </div>
     </section>
 
-    <section class="section-wrap teaching-section" id="teaching"><div class="section-heading"><div class="section-label"><span>05</span><span>TEACHING</span></div><h2>Teaching & mentoring<span class="accent">.</span></h2></div><div id="teachingList" class="article-list" aria-live="polite"></div></section>
+    <div class="content-layout">
+      <div class="main-column">
+        <section class="card content-card" id="about">
+          <div class="section-heading"><span class="section-index">01</span><div><h2 data-i18n="aboutTitle">About</h2><p data-i18n="aboutSubtitle">A little about my work and approach</p></div></div>
+          <p class="lead" data-i18n="aboutText">I'm a game and software developer with professional experience dating back to 2015. My work spans Unity and C#, gameplay programming, online systems, technical problem-solving, and team collaboration.</p>
+          <p class="body-copy" data-i18n="aboutExtra">I also enjoy teaching, mentoring, and helping small teams turn ideas into clear, achievable project plans.</p>
+        </section>
 
-    <section class="section-wrap skills-section">
-      <div class="section-label"><span>04</span><span data-i18n="skillsLabel">CAPABILITIES</span></div>
-      <div class="skills-content"><h2 data-i18n="skillsTitle">Tools & expertise<span class="accent">.</span></h2><div class="skills-list"><span>Unity</span><span>C#</span><span>OOP / SOLID</span><span>Gameplay Programming</span><span>Multiplayer</span><span>Photon</span><span>PlayFab</span><span>Mirror</span><span>WebGL</span><span>Optimization</span><span>Git</span><span>Project Management</span><span>Technical Leadership</span><span>Teaching</span><span>Photoshop</span></div></div>
-    </section>
+        <section class="card content-card" id="experience">
+          <div class="section-heading"><span class="section-index">02</span><div><h2 data-i18n="experienceTitle">Experience</h2><p data-i18n="experienceSubtitle">Professional roles and collaborations</p></div></div>
+          <div class="timeline" id="experienceList" aria-live="polite"></div>
+        </section>
 
-    <section class="section-wrap writing-section" id="writing">
-      <div class="section-heading"><div class="section-label"><span>05</span><span data-i18n="writingLabel">NOTES & IDEAS</span></div><h2 data-i18n="writingTitle">Writing & learning<span class="accent">.</span></h2><p data-i18n="writingSub">Technical notes and articles on game development, software, and emerging technology.</p></div>
-      <div id="articleList" class="article-list" aria-live="polite"></div>
-    </section>
+        <section class="card content-card" id="work">
+          <div class="section-heading"><span class="section-index">03</span><div><h2 data-i18n="workTitle">Selected projects</h2><p data-i18n="workSub">A selection of game development work and technical contributions.</p></div></div>
+          <div class="project-grid" id="projectGrid" aria-live="polite"></div>
+          <p class="section-note" data-i18n="portfolioNote">Project entries are loaded from the portfolio content folders.</p>
+        </section>
 
-    <section class="section-wrap contact-section" id="contact">
-      <div class="section-label"><span>06</span><span data-i18n="contactLabel">LET'S CONNECT</span></div>
-      <div class="contact-content"><p class="eyebrow" data-i18n="contactEyebrow">HAVE A PROJECT IN MIND?</p><h2 data-i18n="contactTitle">Let's build<br><em>something meaningful.</em></h2><p data-i18n="contactText">Available for selected Unity development projects, technical collaboration, and teaching opportunities.</p><a class="button button-primary" href="mailto:mahdirahmati.it@gmail.com">mahdirahmati.it@gmail.com <span>↗</span></a><div class="social-links"><a href="https://github.com/MahdiRahmatii" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://t.me/MRahmati" target="_blank" rel="noreferrer">Telegram ↗</a></div></div>
-    </section>
+        <section class="card content-card" id="services">
+          <div class="section-heading"><span class="section-index">04</span><div><h2 data-i18n="servicesTitle">Services</h2><p data-i18n="servicesSubtitle">Ways I can contribute to a project or team</p></div></div>
+          <div id="serviceGrid" class="service-grid" aria-live="polite"></div>
+        </section>
+
+        <section class="card content-card" id="teaching">
+          <div class="section-heading"><span class="section-index">05</span><div><h2 data-i18n="teachingTitle">Teaching & mentoring</h2><p data-i18n="teachingSubtitle">Courses, workshops and educational activities</p></div></div>
+          <div id="teachingList" class="article-list" aria-live="polite"></div>
+        </section>
+
+        <section class="card content-card" id="writing">
+          <div class="section-heading"><span class="section-index">06</span><div><h2 data-i18n="writingTitle">Articles & writing</h2><p data-i18n="writingSub">Technical notes and articles on game development, software, and emerging technology.</p></div></div>
+          <div id="articleList" class="article-list" aria-live="polite"></div>
+        </section>
+      </div>
+
+      <aside class="side-column">
+        <section class="card side-card" id="skills">
+          <div class="side-heading"><h2 data-i18n="skillsTitle">Skills</h2></div>
+          <div class="skills-list"></div>
+        </section>
+        <section class="card side-card">
+          <div class="side-heading"><h2 data-i18n="educationTitle">Education</h2></div>
+          <div class="simple-entry"><strong data-i18n="educationDegree">Computer Engineering</strong><span>Azad University (IAU)</span></div>
+          <div class="simple-entry"><strong data-i18n="educationCertificate">Harvard CS50</strong><span data-i18n="educationCertificateSub">Programming Certificate</span></div>
+        </section>
+        <section class="card side-card">
+          <div class="side-heading"><h2 data-i18n="connectTitle">Let's connect</h2></div>
+          <p class="side-copy" data-i18n="connectText">For project inquiries, collaboration and professional conversations.</p>
+          <a class="side-link" href="mailto:mahdirahmati.it@gmail.com">mahdirahmati.it@gmail.com ↗</a>
+          <a class="side-link" href="https://t.me/MRahmati" target="_blank" rel="noreferrer">Telegram ↗</a>
+          <a class="side-link" href="https://github.com/MahdiRahmatii" target="_blank" rel="noreferrer">GitHub ↗</a>
+        </section>
+      </aside>
+    </div>
   </main>
-  <footer class="site-footer"><a class="brand" href="#home"><span class="brand-mark">M<span>R</span></span><span>MAHDI RAHMATI</span></a><span data-i18n="footer">Designed & built with care.</span><span>© <span id="year"></span> MAHDI RAHMATI</span></footer>
+
+  <footer class="site-footer"><span>© <span id="year"></span> MAHDI RAHMATI</span><span data-i18n="footer">Designed & built with care.</span><a href="#home" data-i18n="backToTop">Back to top ↑</a></footer>
 </body>
 </html>

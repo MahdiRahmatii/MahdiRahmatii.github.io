@@ -170,7 +170,7 @@ async function renderProfile() {
     const visual = document.getElementById("profileVisual");
     if (visual && profile.profileImage?.src && !visual.querySelector("img")) {
       const img = node("img");
-      img.src = profile.profileImage.src;
+      img.src = profile.profileImage.src.startsWith("./") ? profile.profileImage.src : `./pcv/${profile.profileImage.src}`;
       img.alt = localized(profile.profileImage.alt);
       img.onerror = () => img.remove();
       visual.prepend(img);
