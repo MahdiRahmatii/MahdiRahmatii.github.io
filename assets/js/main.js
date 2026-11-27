@@ -16,188 +16,192 @@ experienceLabel:"پیشینه حرفه‌ای",experienceTitle:"سوابق و م
 skillsLabel:"توانمندی‌ها",skillsTitle:"ابزارها و تخصص‌ها",writingLabel:"یادداشت‌ها و ایده‌ها",writingTitle:"مقالات و یادگیری",writingSub:"یادداشت‌ها و مقالات فنی درباره بازی‌سازی، نرم‌افزار و فناوری‌های نوظهور.",writingComing:"مقالات در حال دسته‌بندی هستند.",writingComingSub:"وبلاگ به‌مرور با یادداشت‌های کاربردی، بررسی پروژه‌ها و تجربه‌های فنی تکمیل خواهد شد.",contactLabel:"در ارتباط باشیم",contactEyebrow:"پروژه‌ای در ذهن دارید؟",contactTitle:"بیایید چیزی<br><em>ارزشمند بسازیم.</em>",contactText:"آماده همکاری در پروژه‌های منتخب Unity، فعالیت‌های فنی و فرصت‌های آموزشی هستم.",footer:"با دقت طراحی و ساخته شده است."
 }
 };
-let language = localStorage.getItem("site-language") || "en";
-const button = document.getElementById("langToggle");
-function setLanguage(next) {
-  language = next;
-  document.documentElement.lang = next;
-  document.documentElement.dir = next === "fa" ? "rtl" : "ltr";
-  document.body.dir = next === "fa" ? "rtl" : "ltr";
-  document.querySelectorAll("[data-i18n]").forEach(el => {
-    const key = el.dataset.i18n;
-    if (copy[next][key]) el.innerHTML = copy[next][key];
-  });
-  button.textContent = next === "fa" ? "EN / فا" : "فا / EN";
-  localStorage.setItem("site-language", next);
-}
-button.addEventListener("click", () => setLanguage(language === "en" ? "fa" : "en"));
-document.getElementById("year").textContent = new Date().getFullYear();
-setLanguage(language);
-
-
-/* Folder-driven portfolio content
-   Add a folder + JSON file and register its slug in the matching index.json.
-   No page markup changes are needed for new entries. */
+const languageKey = "site-language";
+let language = localStorage.getItem(languageKey) === "fa" ? "fa" : "en";
+const languageButton = document.getElementById("langToggle");
 const contentRoot = ".";
-const currentLang = () => document.documentElement.lang === "fa" ? "fa" : "en";
-const localized = (value) => {
-  if (value && typeof value === "object") return value[currentLang()] || value.en || "";
-  return value || "";
+const currentLang = () => language;
+const localized = value => {
+  if (value && typeof value === "object") return value[language] ?? value.en ?? "";
+  return value ?? "";
+};
+const node = (tag, className = "", text) => {
+  const el = document.createElement(tag);
+  if (className) el.className = className;
+  if (text !== undefined && text !== null) el.textContent = String(text);
+  return el;
 };
 async function loadJson(path) {
-  const response = await fetch(path, {cache:"no-store"});
-  if (!response.ok) throw new Error(`Could not load ${path} (${response.status})`);
+  const response = await fetch(path, { cache: "no-cache" });
+  if (!response.ok) throw new Error(`Failed to load ${path}: ${response.status}`);
   return response.json();
 }
-function makeNode(tag, className, text) {
-  const node = document.createElement(tag);
-  if (className) node.className = className;
-  if (text !== undefined) node.textContent = text;
-  return node;
+function applyLanguage(next) {
+  language = next === "fa" ? "fa" : "en";
+  document.documentElement.lang = language;
+  document.documentElement.dir = language === "fa" ? "rtl" : "ltr";
+  document.body.dir = language === "fa" ? "rtl" : "ltr";
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const value = copy[language][el.dataset.i18n];
+    if (value !== undefined) el.innerHTML = value;
+  });
+  if (languageButton) languageButton.textContent = language === "fa" ? "EN / فا" : "فا / EN";
+  localStorage.setItem(languageKey, language);
+  renderAllContent();
 }
 async function renderProjects() {
-  const grid = document.getElementById("projectGrid");
-  if (!grid) return;
-  grid.replaceChildren();
+  const target = document.getElementById("projectGrid");
+  if (!target) return;
+  target.replaceChildren();
   try {
-    const manifest = await loadJson(`${contentRoot}/Projects/index.json`);
+    const manifest = await loadJson("./Projects/index.json");
     const records = await Promise.all((manifest.items || []).map(slug =>
-      loadJson(`${contentRoot}/Projects/${encodeURIComponent(slug)}/project.json`)
+      loadJson(`./Projects/${encodeURIComponent(slug)}/project.json`)
     ));
     records.forEach((project, index) => {
-      const card = makeNode("article", "project-card");
-      const art = makeNode("div", `project-art project-art-data project-art-${index % 4}`);
-      const artLabel = makeNode("span", "project-art-label", String(index + 1).padStart(2,"0"));
-      art.append(artLabel);
-      const meta = makeNode("div", "project-meta");
-      const info = makeNode("div");
-      info.append(makeNode("span","project-type",localized(project.category)));
-      info.append(makeNode("h3","",localized(project.title)));
-      info.append(makeNode("p","",localized(project.summary)));
-      const org = makeNode("p","project-org", [project.organization, project.period].filter(Boolean).join(" · "));
-      info.append(org);
-      const role = makeNode("p","project-role",localized(project.role));
-      info.append(role);
-      const arrow = makeNode("span","project-arrow","↗");
-      meta.append(info,arrow);
-      card.append(art,meta);
-      if (project.details || (project.highlights && project.highlights.length)) {
-        const extra = makeNode("details","project-details");
-        extra.append(makeNode("summary","",currentLang()==="fa"?"جزئیات بیشتر":"More details"));
-        if (project.details) extra.append(makeNode("p","",localized(project.details)));
-        const bullets = localized(project.highlights);
-        if (Array.isArray(bullets) && bullets.length) {
-          const ul = makeNode("ul","");
-          bullets.forEach(item => ul.append(makeNode("li","",item)));
-          extra.append(ul);
+      const card = node("article", "project-card");
+      const art = node("div", `project-art project-art-data project-art-${index % 4}`);
+      art.append(node("span", "project-art-label", String(index + 1).padStart(2, "0")));
+      const meta = node("div", "project-meta");
+      const info = node("div");
+      info.append(
+        node("span", "project-type", localized(project.category)),
+        node("h3", "", localized(project.title)),
+        node("p", "", localized(project.summary))
+      );
+      const orgPeriod = [localized(project.organization), localized(project.period)].filter(Boolean).join(" · ");
+      if (orgPeriod) info.append(node("p", "project-org", orgPeriod));
+      if (project.role) info.append(node("p", "project-role", localized(project.role)));
+      meta.append(info, node("span", "project-arrow", "↗"));
+      card.append(art, meta);
+      if (project.details || project.highlights) {
+        const details = node("details", "project-details");
+        details.append(node("summary", "", language === "fa" ? "جزئیات بیشتر" : "More details"));
+        if (project.details) details.append(node("p", "", localized(project.details)));
+        const highlights = localized(project.highlights);
+        if (Array.isArray(highlights) && highlights.length) {
+          const list = node("ul");
+          highlights.forEach(item => list.append(node("li", "", item)));
+          details.append(list);
         }
-        if (project.evidence) extra.append(makeNode("p","project-evidence",localized(project.evidence)));
-        meta.append(extra);
+        if (project.evidence) details.append(node("p", "project-evidence", localized(project.evidence)));
+        meta.append(details);
       }
-      grid.append(card);
+      target.append(card);
     });
-    if (!records.length) grid.append(makeNode("p","section-note",currentLang()==="fa"?"هنوز پروژه‌ای ثبت نشده است.":"No projects have been added yet."));
+    if (!records.length) target.append(node("p", "section-note", language === "fa" ? "هنوز پروژه‌ای ثبت نشده است." : "No projects have been added yet."));
   } catch (error) {
-    grid.append(makeNode("p","section-note",currentLang()==="fa"?"بارگذاری پروژه‌ها با خطا مواجه شد.":"Projects could not be loaded."));
-    console.error(error);
+    console.error("Projects:", error);
+    target.append(node("p", "section-note", language === "fa" ? "بارگذاری پروژه‌ها ناموفق بود." : "Projects could not be loaded."));
   }
 }
 async function renderArticles() {
-  const list = document.getElementById("articleList");
-  if (!list) return;
-  list.replaceChildren();
+  const target = document.getElementById("articleList");
+  if (!target) return;
+  target.replaceChildren();
   try {
-    const manifest = await loadJson(`${contentRoot}/Articles/index.json`);
+    const manifest = await loadJson("./Articles/index.json");
     const records = await Promise.all((manifest.items || []).map(slug =>
-      loadJson(`${contentRoot}/Articles/${encodeURIComponent(slug)}/article.json`)
+      loadJson(`./Articles/${encodeURIComponent(slug)}/article.json`)
     ));
     records.forEach(article => {
-      const item = makeNode("article","article-item");
-      const body = makeNode("div","");
-      body.append(makeNode("span","project-type",localized(article.category)));
-      body.append(makeNode("h3","",localized(article.title)));
-      body.append(makeNode("p","",localized(article.excerpt)));
-      if (article.date) body.append(makeNode("span","article-date",article.date));
+      const item = node("article", "article-item");
+      item.append(
+        node("span", "project-type", localized(article.category)),
+        node("h3", "", localized(article.title)),
+        node("p", "", localized(article.excerpt))
+      );
+      if (article.date) item.append(node("span", "article-date", localized(article.date)));
       if (article.url) {
-        const link = makeNode("a","text-link",currentLang()==="fa"?"مطالعه مقاله ↗":"Read article ↗");
+        const link = node("a", "text-link", language === "fa" ? "مطالعه مقاله ↗" : "Read article ↗");
         link.href = article.url;
         link.target = "_blank";
         link.rel = "noreferrer";
-        body.append(link);
+        item.append(link);
       }
-      item.append(body);
-      list.append(item);
+      target.append(item);
     });
     if (!records.length) {
-      const empty = makeNode("div","writing-placeholder");
-      empty.append(makeNode("span","writing-icon","✳"));
-      const body = makeNode("div","");
-      body.append(makeNode("strong","",currentLang()==="fa"?"هنوز مقاله‌ای ثبت نشده است.":"No articles have been added yet."));
-      body.append(makeNode("p","",currentLang()==="fa"?"رزومه‌های فعلی مقاله منتشرشده‌ای معرفی نمی‌کنند. پس از افزودن مقاله، کافی است پوشه آن را در Articles ثبت کنید.":"The current CVs do not list published articles. Add an article folder and register it in Articles/index.json when ready."));
+      const empty = node("div", "writing-placeholder");
+      empty.append(node("span", "writing-icon", "✳"));
+      const body = node("div");
+      body.append(
+        node("strong", "", language === "fa" ? "هنوز مقاله‌ای ثبت نشده است." : "No articles have been added yet."),
+        node("p", "", language === "fa" ? "پس از انتشار مقاله، پوشه آن را در Articles ثبت کنید." : "Add an article folder to Articles when a publication is ready.")
+      );
       empty.append(body);
-      list.append(empty);
+      target.append(empty);
     }
   } catch (error) {
-    list.append(makeNode("p","section-note",currentLang()==="fa"?"بارگذاری مقالات با خطا مواجه شد.":"Articles could not be loaded."));
-    console.error(error);
+    console.error("Articles:", error);
+    target.append(node("p", "section-note", language === "fa" ? "بارگذاری مقالات ناموفق بود." : "Articles could not be loaded."));
   }
 }
-const originalSetLanguage = setLanguage;
-setLanguage = function(next) {
-  originalSetLanguage(next);
-  renderProjects();
-  renderArticles();
-};
-renderProjects();
-renderArticles();
-
-
-/* Extended folder-driven sections */
-async function renderSimpleCollection(folder, fileName, targetId, kind) {
-  const target=document.getElementById(targetId); if(!target) return;
+async function renderCollection(folder, fileName, targetId, className) {
+  const target = document.getElementById(targetId);
+  if (!target) return;
   target.replaceChildren();
   try {
-    const manifest=await loadJson(`./${folder}/index.json`);
-    const entries=await Promise.all((manifest.items||[]).map(slug=>loadJson(`./${folder}/${encodeURIComponent(slug)}/${fileName}`)));
-    entries.forEach(entry=>{
-      const card=makeNode("article",kind==="service"?"service-card":"article-item");
-      const body=makeNode("div","");
-      body.append(makeNode("span","project-type",localized(entry.category||entry.type)));
-      body.append(makeNode("h3","",localized(entry.title||entry.name)));
-      body.append(makeNode("p","",localized(entry.summary||entry.description)));
-      if(entry.period) body.append(makeNode("span","article-date",entry.period));
-      if(entry.role) body.append(makeNode("p","project-role",localized(entry.role)));
-      card.append(body); target.append(card);
+    const manifest = await loadJson(`./${folder}/index.json`);
+    const records = await Promise.all((manifest.items || []).map(slug =>
+      loadJson(`./${folder}/${encodeURIComponent(slug)}/${fileName}`)
+    ));
+    records.forEach(record => {
+      const card = node("article", className);
+      const body = node("div");
+      const category = localized(record.category || record.type);
+      if (category) body.append(node("span", "project-type", category));
+      body.append(node("h3", "", localized(record.title || record.name)));
+      body.append(node("p", "", localized(record.summary || record.description)));
+      if (record.period) body.append(node("span", "article-date", localized(record.period)));
+      if (record.role) body.append(node("p", "project-role", localized(record.role)));
+      card.append(body);
+      target.append(card);
     });
-    if(!entries.length) target.append(makeNode("p","section-note",currentLang()==="fa"?"این بخش به‌زودی تکمیل می‌شود.":"This section will be populated soon."));
-  } catch(e) { console.error(folder,e); target.append(makeNode("p","section-note",currentLang()==="fa"?"بارگذاری اطلاعات ناموفق بود.":"Content could not be loaded.")); }
+    if (!records.length) target.append(node("p", "section-note", language === "fa" ? "محتوایی برای نمایش وجود ندارد." : "No entries yet."));
+  } catch (error) {
+    console.error(folder + ":", error);
+    target.append(node("p", "section-note", language === "fa" ? "بارگذاری اطلاعات ناموفق بود." : "Content could not be loaded."));
+  }
 }
 async function renderProfile() {
   try {
-    const p=await loadJson("./About/profile.json");
-    const image=document.getElementById("profileVisual");
-    if(image && p.profileImage) {
-      const img=document.createElement("img"); img.src=p.profileImage.src; img.alt=localized(p.profileImage.alt);
-      img.onerror=()=>img.remove(); image.prepend(img);
+    const profile = await loadJson("./About/profile.json");
+    const visual = document.getElementById("profileVisual");
+    if (visual && profile.profileImage?.src && !visual.querySelector("img")) {
+      const img = node("img");
+      img.src = profile.profileImage.src;
+      img.alt = localized(profile.profileImage.alt);
+      img.onerror = () => img.remove();
+      visual.prepend(img);
     }
-    const name=localized(p.name); if(name) document.title=name+" — Game Developer & Software Engineer";
-  } catch(e) { console.info("Profile content is not configured yet."); }
+    const name = localized(profile.name);
+    if (name) document.title = name + " — Game Developer & Software Engineer";
+  } catch (error) {
+    console.info("Profile metadata is unavailable.", error);
+  }
 }
 async function renderSkills() {
+  const target = document.querySelector(".skills-list");
+  if (!target) return;
   try {
-    const data=await loadJson("./Skills/index.json");
-    const target=document.querySelector(".skills-list"); if(!target) return;
+    const data = await loadJson("./Skills/index.json");
     target.replaceChildren();
-    (data.items||[]).forEach(item=>target.append(makeNode("span", "", localized(item.name||item))));
-  } catch(e) { console.error("Skills",e); }
+    (data.items || []).forEach(item => target.append(node("span", "", localized(item.name || item))));
+  } catch (error) {
+    console.error("Skills:", error);
+  }
 }
 function renderAllContent() {
-  renderProjects(); renderArticles();
-  renderSimpleCollection("Services","service.json","serviceGrid","service");
-  renderSimpleCollection("Teaching","teaching.json","teachingList","teaching");
-  renderSimpleCollection("Experience","experience.json","experienceList","experience");
-  renderProfile(); renderSkills();
+  renderProjects();
+  renderArticles();
+  renderCollection("Services", "service.json", "serviceGrid", "service-card");
+  renderCollection("Teaching", "teaching.json", "teachingList", "article-item");
+  renderCollection("Experience", "experience.json", "experienceList", "timeline-item");
+  renderProfile();
+  renderSkills();
 }
-const previousLanguageSetter=setLanguage;
-setLanguage=function(next){ previousLanguageSetter(next); renderAllContent(); };
-renderAllContent();
+if (languageButton) languageButton.addEventListener("click", () => applyLanguage(language === "en" ? "fa" : "en"));
+const year = document.getElementById("year");
+if (year) year.textContent = new Date().getFullYear();
+applyLanguage(language);
