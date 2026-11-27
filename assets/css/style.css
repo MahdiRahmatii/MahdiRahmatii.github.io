@@ -60,3 +60,22 @@ html[data-theme="dark"] .button-secondary{border-color:var(--accent);color:var(-
 html[data-theme="dark"] .side-link{border-color:var(--line)}
 @media(max-width:680px){.theme-toggle,.lang-toggle{padding:7px 9px}.project-art{height:68px}.project-meta{padding:9px}.project-meta h3{font-size:13px}}
 @media(max-width:420px){.project-grid{grid-template-columns:1fr}.project-art{height:78px}}
+
+.section-media{width:38px;height:38px;object-fit:cover;border-radius:10px;flex:0 0 38px}
+.company-logo{width:46px;height:46px;object-fit:cover;border-radius:11px;flex:0 0 46px;border:1px solid var(--line);background:var(--surface)}
+.timeline-item{display:flex;align-items:flex-start;gap:14px;padding:17px 0}
+.timeline-item>div{min-width:0;flex:1}
+.project-media,.article-media{display:block;width:100%;height:130px;object-fit:cover;background:var(--accent-soft)}
+.article-item{display:grid;grid-template-columns:150px minmax(0,1fr);gap:15px;align-items:start}
+.article-media{height:112px;border-radius:7px}
+.article-content{min-width:0}
+.text-link{display:inline-flex;margin-top:9px;color:var(--accent);font-size:13px;font-weight:700}
+.project-art{height:126px;overflow:hidden}.project-art img{width:100%;height:100%;object-fit:cover;display:block}.project-art:before,.project-art-label{display:none}
+.project-card:hover,.service-card:hover,.article-item:hover{transform:translateY(-3px);transition:transform .22s ease,border-color .22s ease}
+.reveal-pending{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}.reveal-visible{opacity:1;transform:translateY(0)}
+@keyframes rise-in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:680px){.article-item{grid-template-columns:110px minmax(0,1fr);gap:11px}.article-media{height:96px}.project-art{height:112px}}
+@media(max-width:420px){.article-item{grid-template-columns:1fr}.article-media{height:150px}.company-logo{width:40px;height:40px;flex-basis:40px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal-pending{opacity:1;transform:none}}
+
+.profile-placeholder-image{width:100%;height:100%;object-fit:cover;display:block}
