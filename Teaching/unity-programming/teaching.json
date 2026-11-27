@@ -1,0 +1,14 @@
+{
+  "title": {
+    "en": "Unity & C# Instruction",
+    "fa": "آموزش Unity و C#"
+  },
+  "category": {
+    "en": "Teaching",
+    "fa": "آموزش"
+  },
+  "summary": {
+    "en": "Teaching foundational game-development concepts using C# and Unity, including mentoring students through practical projects.",
+    "fa": "آموزش مفاهیم پایه توسعه بازی با C# و Unity و راهنمایی دانشجویان در اجرای پروژه‌های عملی."
+  }
+}
