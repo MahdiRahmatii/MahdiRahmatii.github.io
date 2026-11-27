@@ -150,3 +150,54 @@ setLanguage = function(next) {
 };
 renderProjects();
 renderArticles();
+
+
+/* Extended folder-driven sections */
+async function renderSimpleCollection(folder, fileName, targetId, kind) {
+  const target=document.getElementById(targetId); if(!target) return;
+  target.replaceChildren();
+  try {
+    const manifest=await loadJson(`./${folder}/index.json`);
+    const entries=await Promise.all((manifest.items||[]).map(slug=>loadJson(`./${folder}/${encodeURIComponent(slug)}/${fileName}`)));
+    entries.forEach(entry=>{
+      const card=makeNode("article",kind==="service"?"service-card":"article-item");
+      const body=makeNode("div","");
+      body.append(makeNode("span","project-type",localized(entry.category||entry.type)));
+      body.append(makeNode("h3","",localized(entry.title||entry.name)));
+      body.append(makeNode("p","",localized(entry.summary||entry.description)));
+      if(entry.period) body.append(makeNode("span","article-date",entry.period));
+      if(entry.role) body.append(makeNode("p","project-role",localized(entry.role)));
+      card.append(body); target.append(card);
+    });
+    if(!entries.length) target.append(makeNode("p","section-note",currentLang()==="fa"?"این بخش به‌زودی تکمیل می‌شود.":"This section will be populated soon."));
+  } catch(e) { console.error(folder,e); target.append(makeNode("p","section-note",currentLang()==="fa"?"بارگذاری اطلاعات ناموفق بود.":"Content could not be loaded.")); }
+}
+async function renderProfile() {
+  try {
+    const p=await loadJson("./About/profile.json");
+    const image=document.getElementById("profileVisual");
+    if(image && p.profileImage) {
+      const img=document.createElement("img"); img.src=p.profileImage.src; img.alt=localized(p.profileImage.alt);
+      img.onerror=()=>img.remove(); image.prepend(img);
+    }
+    const name=localized(p.name); if(name) document.title=name+" — Game Developer & Software Engineer";
+  } catch(e) { console.info("Profile content is not configured yet."); }
+}
+async function renderSkills() {
+  try {
+    const data=await loadJson("./Skills/index.json");
+    const target=document.querySelector(".skills-list"); if(!target) return;
+    target.replaceChildren();
+    (data.items||[]).forEach(item=>target.append(makeNode("span", "", localized(item.name||item))));
+  } catch(e) { console.error("Skills",e); }
+}
+function renderAllContent() {
+  renderProjects(); renderArticles();
+  renderSimpleCollection("Services","service.json","serviceGrid","service");
+  renderSimpleCollection("Teaching","teaching.json","teachingList","teaching");
+  renderSimpleCollection("Experience","experience.json","experienceList","experience");
+  renderProfile(); renderSkills();
+}
+const previousLanguageSetter=setLanguage;
+setLanguage=function(next){ previousLanguageSetter(next); renderAllContent(); };
+renderAllContent();
