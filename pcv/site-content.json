@@ -548,5 +548,33 @@
       "en": "Back to top ↑",
       "fa": "بازگشت به بالا ↑"
     }
+  },
+  "brandMark": "MR",
+  "ui": {
+    "contact": {
+      "en": "Contact",
+      "fa": "ارتباط"
+    },
+    "phone": "09134458540",
+    "theme": {
+      "light": "☾",
+      "dark": "☀",
+      "lightTitle": {
+        "en": "Switch to dark theme",
+        "fa": "فعال‌سازی حالت تاریک"
+      },
+      "darkTitle": {
+        "en": "Switch to light theme",
+        "fa": "فعال‌سازی حالت روشن"
+      }
+    },
+    "language": {
+      "en": "فا / EN",
+      "fa": "EN / فا"
+    },
+    "loadError": {
+      "en": "The portfolio content could not be loaded. Please try again later.",
+      "fa": "بارگذاری محتوای سایت ناموفق بود. لطفاً بعداً دوباره تلاش کنید."
+    }
   }
 }
