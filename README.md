@@ -4,7 +4,7 @@
     <strong>Game Development</strong> &nbsp;•&nbsp;
     <strong>Software Development</strong> &nbsp;•&nbsp;
     <strong>2D Graphic Design</strong> &nbsp;•&nbsp;
-    <strong>Team Management</strong>
+    <strong>Small-Team Management</strong>
   </p>
   <p><em>I bring technology, visual creativity, and teamwork together to turn ideas into practical digital experiences.</em></p>
   <a href="https://mahdirahmatii.github.io">
