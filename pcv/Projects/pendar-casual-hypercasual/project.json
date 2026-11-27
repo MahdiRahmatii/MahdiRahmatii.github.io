@@ -36,5 +36,7 @@
     "en": "Source: English CV, Experience section, Pendar.io.",
     "fa": "منبع: رزومه انگلیسی، بخش سوابق شغلی، Pendar.io."
   },
-  "media": []
+  "media": [],
+  "url": "https://example.com/pendar-casual-hypercasual",
+  "image": "./assets/images/project-placeholder.svg"
 }
