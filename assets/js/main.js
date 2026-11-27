@@ -54,9 +54,9 @@ async function renderProjects() {
   if (!target) return;
   target.replaceChildren();
   try {
-    const manifest = await loadJson("./Projects/index.json");
+    const manifest = await loadJson("./pcv/Projects/index.json");
     const records = await Promise.all((manifest.items || []).map(slug =>
-      loadJson(`./Projects/${encodeURIComponent(slug)}/project.json`)
+      loadJson(`./pcv/Projects/${encodeURIComponent(slug)}/project.json`)
     ));
     records.forEach((project, index) => {
       const card = node("article", "project-card");
@@ -100,9 +100,9 @@ async function renderArticles() {
   if (!target) return;
   target.replaceChildren();
   try {
-    const manifest = await loadJson("./Articles/index.json");
+    const manifest = await loadJson("./pcv/Articles/index.json");
     const records = await Promise.all((manifest.items || []).map(slug =>
-      loadJson(`./Articles/${encodeURIComponent(slug)}/article.json`)
+      loadJson(`./pcv/Articles/${encodeURIComponent(slug)}/article.json`)
     ));
     records.forEach(article => {
       const item = node("article", "article-item");
@@ -142,9 +142,9 @@ async function renderCollection(folder, fileName, targetId, className) {
   if (!target) return;
   target.replaceChildren();
   try {
-    const manifest = await loadJson(`./${folder}/index.json`);
+    const manifest = await loadJson(`./pcv/${folder}/index.json`);
     const records = await Promise.all((manifest.items || []).map(slug =>
-      loadJson(`./${folder}/${encodeURIComponent(slug)}/${fileName}`)
+      loadJson(`./pcv/${folder}/${encodeURIComponent(slug)}/${fileName}`)
     ));
     records.forEach(record => {
       const card = node("article", className);
@@ -166,7 +166,7 @@ async function renderCollection(folder, fileName, targetId, className) {
 }
 async function renderProfile() {
   try {
-    const profile = await loadJson("./About/profile.json");
+    const profile = await loadJson("./pcv/About/profile.json");
     const visual = document.getElementById("profileVisual");
     if (visual && profile.profileImage?.src && !visual.querySelector("img")) {
       const img = node("img");
@@ -185,7 +185,7 @@ async function renderSkills() {
   const target = document.querySelector(".skills-list");
   if (!target) return;
   try {
-    const data = await loadJson("./Skills/index.json");
+    const data = await loadJson("./pcv/Skills/index.json");
     target.replaceChildren();
     (data.items || []).forEach(item => target.append(node("span", "", localized(item.name || item))));
   } catch (error) {
