@@ -1,0 +1,36 @@
+{
+  "slug": "bus-puzzle-mvp",
+  "title": {
+    "en": "Passenger Sorting Puzzle MVP",
+    "fa": "MVP بازی مرتب‌سازی مسافران"
+  },
+  "organization": "Pendar.io",
+  "period": "Recent collaboration",
+  "category": {
+    "en": "Android · Casual Puzzle · MVP",
+    "fa": "اندروید · پازل کژوال · MVP"
+  },
+  "role": {
+    "en": "Full technical implementation; art and visual design excluded",
+    "fa": "پیاده‌سازی کامل بخش فنی؛ طراحی و آرت خارج از مسئولیت من"
+  },
+  "summary": {
+    "en": "A completed Android MVP inspired by the Bus Jam passenger-sorting puzzle genre.",
+    "fa": "یک MVP تکمیل‌شده اندرویدی با الهام از سبک بازی‌های مرتب‌سازی مسافران مانند Bus Jam."
+  },
+  "details": {
+    "en": "The technical project was implemented by me, excluding design and art production. The public case study will be expanded when approved screenshots and technical details are added.",
+    "fa": "پیاده‌سازی فنی پروژه توسط من انجام شده و طراحی و تولید آرت مستثنا بوده است. پس از آماده‌شدن تصاویر مجاز و جزئیات فنی، شرح‌مطالعه کامل‌تر می‌شود."
+  },
+  "highlights": {
+    "en": [
+      "Android MVP completed and delivered",
+      "Technical implementation handled independently; art/design excluded"
+    ],
+    "fa": [
+      "تکمیل و تحویل MVP اندرویدی",
+      "انجام مستقل پیاده‌سازی فنی؛ طراحی و آرت مستثنا"
+    ]
+  },
+  "media": []
+}
